@@ -57,13 +57,17 @@
 	
 #if !TARGET_IPHONE_SIMULATOR
 	
-	self.cameraController = [[[UIImagePickerController alloc] init] autorelease];
-	self.cameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
-	CGAffineTransform cameraTransform = CGAffineTransformMakeScale(1.232, 1.232);
-	self.cameraController.cameraViewTransform = cameraTransform;//CGAffineTransformScale(self.cameraController.cameraViewTransform, 1.23f,  1.23f);
-	
-	self.cameraController.showsCameraControls = NO;
-	self.cameraController.navigationBarHidden = YES;
+	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) 
+	{
+		self.cameraController = [[[UIImagePickerController alloc] init] autorelease];
+		self.cameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
+		CGAffineTransform cameraTransform = CGAffineTransformMakeScale(1.232, 1.232);
+		self.cameraController.cameraViewTransform = cameraTransform;//CGAffineTransformScale(self.cameraController.cameraViewTransform, 1.23f,  1.23f);
+		
+		self.cameraController.showsCameraControls = NO;
+		self.cameraController.navigationBarHidden = YES;
+	}
+
 #endif
 	self.scaleViewsBasedOnDistance = NO;
 	self.maximumScaleDistance = 0.0;
@@ -479,10 +483,13 @@ NSComparisonResult LocationSortClosestFirst(PoiItem *s1, PoiItem *s2, void *igno
 
 - (void)viewDidAppear:(BOOL)animated {
 #if !TARGET_IPHONE_SIMULATOR
-	[self.cameraController setCameraOverlayView:ar_overlayView];
-	[self presentModalViewController:self.cameraController animated:NO];
-	
-	[ar_overlayView setFrame:self.cameraController.view.bounds];
+	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) 
+	{
+		[self.cameraController setCameraOverlayView:ar_overlayView];
+		[self presentModalViewController:self.cameraController animated:NO];
+		
+		[ar_overlayView setFrame:self.cameraController.view.bounds];
+	}
 #endif
 	
 	if (!_updateTimer) {

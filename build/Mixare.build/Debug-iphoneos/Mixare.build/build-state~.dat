@@ -1,1861 +1,0 @@
-TMixare
-v7
-r0
-t338189572.869256
-cCheck dependencies
-cCpResource build/Debug-iphoneos/Mixare.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-cProcessInfoPlistFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Info.plist" Mixare-Info.plist
-cCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib"
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/103-map.png" 103-map.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/86-camera.png" 86-camera.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/source.png" source.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_datasource.png" icons/icon_datasource.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_edit.png" icons/icon_edit.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_map.png" icons/icon_map.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white.png" icons/icon_white.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white1.png" icons/icon_white1.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo.png" icons/logo.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo.png" twitter_logo.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo.png" wikipedia_logo.png
-cCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib"
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo.png" buzz_logo.png
-cCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib"
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/list.png" list.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/circle.png" circle.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_512x512px.png" mixare_512x512px.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo_mixare_round.png" logo_mixare_round.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_button.png" mixare_button.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo_small.png" twitter_logo_small.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo_small.png" buzz_logo_small.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png" wikipedia_logo_small.png
-cCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/English.lproj/Localizable.strings" English.lproj/Localizable.strings
-cCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/German.lproj/Localizable.strings" German.lproj/Localizable.strings
-cCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Italian.lproj/Localizable.strings" Italian.lproj/Localizable.strings
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default.png" Default.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default@2x.png" Default@2x.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png" mixare-logo_114x114_72_dpi.png
-cCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png" mixare-logo_57x57_72_dpi.png
-cCpResource build/Debug-iphoneos/Mixare.app/singapore_HD singapore_HD
-cCpResource build/Debug-iphoneos/Mixare.app/myhouse.json myhouse.json
-cCpResource build/Debug-iphoneos/Mixare.app/dsta_tower_A.json dsta_tower_A.json
-cCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib"
-cProcessPCH /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch.gch Mixare_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/main.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/XMLHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/JsonHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixVector.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Matrix.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Camera.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSObject+SBJSON.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSString+SBJSON.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonBase.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonParser.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonWriter.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/ListViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceTableCell.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PhysicalPlace.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedGeoViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PoiItem.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/WebViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataSource.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MarkerView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Radar.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/RadarViewPortView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MoreViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixareAppDelegate.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MapViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlay.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlayView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AddPOIController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare" normal armv7
-cGenerateDSYMFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app.dSYM" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare"
-cProcessProductPackaging "/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision"
-cTouch "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent"
-cCodeSign "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-cValidate "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
-c000000004CC7DC9E0000000000000110
-t1288166558
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
-c000000004CB3DFCF00000000000001A7
-t1286856655
-s423
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-c000000004CB3DFCF00000000000001E5
-t1286856655
-s485
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004CC10EF500000000003532B0
-t1287720693
-s3486384
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c000000004CC11B5300000000000D96F0
-t1287723859
-s890608
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
-c000000004CC11B4300000000000001D0
-t1287723843
-s464
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CoreMotion.h
-c000000004CC11B5400000000000001CB
-t1287723860
-s459
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC10F4700000000003E1F20
-t1287720775
-s4071200
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC10F1C0000000000001466
-t1287720732
-s5222
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h
-c000000004CC11D4800000000000002FE
-t1287724360
-s766
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/MapKit.framework/MapKit
-c000000004CC11D62000000000029CFA0
-t1287724386
-s2740128
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004CC1111C00000000000000C4
-t1287721244
-s196
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c000000004CC1127D0000000000267530
-t1287721597
-s2520368
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC11AE60000000000000AA1
-t1287723750
-s2721
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC11B750000000000C769F0
-t1287723893
-s13068784
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/103-map.png
-c000000004E78180B00000000000001FB
-t1316493323
-s507
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/86-camera.png
-c000000004E78180B000000000000015A
-t1316493323
-s346
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib
-c000000004E758BF900000000000085AD
-t1316326393
-s34221
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.h
-c000000004E76384C00000000000004EC
-t1316370508
-s1260
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m
-c000000004E7646520000000000000B63
-t1316374098
-s2915
-i"AddPOIController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.h
-c000000004E78180B00000000000003D2
-t1316493323
-s978
-i<Foundation/Foundation.h>
-i"AugmentedViewController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m
-c000000004E78180B0000000000000599
-t1316493323
-s1433
-i"AugmentedGeoViewController.h"
-i"PhysicalPlace.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.h
-c000000004E78180B0000000000000D9F
-t1316493323
-s3487
-i<UIKit/UIKit.h>
-i"MarkerView.h"
-i<CoreLocation/CoreLocation.h>
-i"Radar.h"
-i"PoiItem.h"
-i"RadarViewPortView.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m
-c000000004E78180B000000000000422F
-t1316493323
-s16943
-i"AugmentedViewController.h"
-i<QuartzCore/QuartzCore.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.h
-c000000004E78180B00000000000005A9
-t1316493323
-s1449
-i<Foundation/Foundation.h>
-i"Matrix.h"
-i"MixVector.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m
-c000000004E78180B00000000000006CB
-t1316493323
-s1739
-i"Camera.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.h
-c000000004E78180B000000000000031B
-t1316493323
-s795
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m
-c000000004E78180B0000000000000327
-t1316493323
-s807
-i"DataHandler.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.h
-c000000004E78180B000000000000056A
-t1316493323
-s1386
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m
-c000000004E78180B0000000000000625
-t1316493323
-s1573
-i"DataSource.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JSON.h
-c000000004E78180B0000000000000A34
-t1316493323
-s2612
-i"SBJsonParser.h"
-i"SBJsonWriter.h"
-i"NSObject+SBJSON.h"
-i"NSString+SBJSON.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.h
-c000000004E78180B0000000000000481
-t1316493323
-s1153
-i"JSON.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m
-c000000004E78180B00000000000014F3
-t1316493323
-s5363
-i"JsonHandler.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.h
-c000000004E781F3200000000000004B7
-t1316495154
-s1207
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-i"JsonHandler.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m
-c000000004E781B5B0000000000001519
-t1316494171
-s5401
-i"ListViewController.h"
-i"WebViewController.h"
-i"AddPOIController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.h
-c000000004E781FFB00000000000006A2
-t1316495355
-s1698
-i<Foundation/Foundation.h>
-i<MapKit/MapKit.h>
-i<CoreLocation/CoreLocation.h>
-i"TileOverlay.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m
-c000000004E7822430000000000001600
-t1316495939
-s5632
-i"MapViewController.h"
-i"AddPOIController.h"
-i"TileOverlay.h"
-i"TileOverlayView.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.h
-c000000004E78180B0000000000000522
-t1316493323
-s1314
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m
-c000000004E78180B0000000000001659
-t1316493323
-s5721
-i"MarkerView.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.h
-c000000004E78180B00000000000006E7
-t1316493323
-s1767
-i<Foundation/Foundation.h>
-i"MixVector.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m
-c000000004E78180B000000000000147B
-t1316493323
-s5243
-i"Matrix.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.h
-c000000004E78180B000000000000059C
-t1316493323
-s1436
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m
-c000000004E78180B0000000000000917
-t1316493323
-s2327
-i"MixVector.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.h
-c000000004E78180B0000000000000B8D
-t1316493323
-s2957
-i<UIKit/UIKit.h>
-i<CoreLocation/CoreLocation.h>
-i<CoreMotion/CoreMotion.h>
-i"ListViewController.h"
-i"AugmentedGeoViewController.h"
-i"JsonHandler.h"
-i"MapViewController.h"
-i"MarkerView.h"
-i"Radar.h"
-i"MoreViewController.h"
-i"SourceViewController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m
-c000000004E781E440000000000006152
-t1316494916
-s24914
-i"MixareAppDelegate.h"
-i"SourceViewController.h"
-i"JsonHandler.h"
-i"PhysicalPlace.h"
-i"DataSource.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.h
-c000000004E78180B00000000000005A6
-t1316493323
-s1446
-i<UIKit/UIKit.h>
-i<CoreLocation/CoreLocation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m
-c000000004E78180B0000000000000D70
-t1316493323
-s3440
-i"MoreViewController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.h
-c000000004E78180B000000000000085F
-t1316493323
-s2143
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m
-c000000004E78180B000000000000077D
-t1316493323
-s1917
-i"NSObject+SBJSON.h"
-i"SBJsonWriter.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.h
-c000000004E78180B00000000000007F0
-t1316493323
-s2032
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m
-c000000004E78180B000000000000075D
-t1316493323
-s1885
-i"NSString+SBJSON.h"
-i"SBJsonParser.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.h
-c000000004E78180B00000000000004F8
-t1316493323
-s1272
-i<Foundation/Foundation.h>
-i"PoiItem.h"
-i<CoreLocation/CoreLocation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m
-c000000004E78180B0000000000000977
-t1316493323
-s2423
-i"PhysicalPlace.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.h
-c000000004E78180B000000000000087E
-t1316493323
-s2174
-i<Foundation/Foundation.h>
-i<MapKit/MapKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m
-c000000004E78180B000000000000099E
-t1316493323
-s2462
-i"PoiItem.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.h
-c000000004E78180B000000000000040E
-t1316493323
-s1038
-i<UIKit/UIKit.h>
-i"PhysicalPlace.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m
-c000000004E781E71000000000000108E
-t1316494961
-s4238
-i"Radar.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.h
-c000000004E78180B00000000000003EC
-t1316493323
-s1004
-i<UIKit/UIKit.h>
-i"Radar.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m
-c000000004E78180B000000000000072D
-t1316493323
-s1837
-i"RadarViewPortView.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.h
-c000000004E78180B0000000000000B82
-t1316493323
-s2946
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m
-c000000004E78180B0000000000000AC1
-t1316493323
-s2753
-i"SBJsonBase.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.h
-c000000004E78180B0000000000000C8F
-t1316493323
-s3215
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m
-c000000004E78180B0000000000003B7A
-t1316493323
-s15226
-i"SBJsonParser.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.h
-c000000004E78180B00000000000011D9
-t1316493323
-s4569
-i<Foundation/Foundation.h>
-i"SBJsonBase.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m
-c000000004E78180B000000000000206D
-t1316493323
-s8301
-i"SBJsonWriter.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.h
-c000000004E78180B0000000000000455
-t1316493323
-s1109
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m
-c000000004E78180B0000000000000568
-t1316493323
-s1384
-i"SourceTableCell.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.h
-c000000004E78180B000000000000045F
-t1316493323
-s1119
-i<UIKit/UIKit.h>
-i<Foundation/Foundation.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m
-c000000004E78180B0000000000001ECE
-t1316493323
-s7886
-i"SourceViewController.h"
-i"SourceTableCell.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.h
-c000000004E78180B0000000000000C47
-t1316493323
-s3143
-i<MapKit/MapKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m
-c000000004E78180B0000000000001546
-t1316493323
-s5446
-i"TileOverlay.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.h
-c000000004E78180B0000000000000ABA
-t1316493323
-s2746
-i<MapKit/MapKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m
-c000000004E78180B000000000000159A
-t1316493323
-s5530
-i"TileOverlayView.h"
-i"TileOverlay.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.h
-c000000004E78180B00000000000003D1
-t1316493323
-s977
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m
-c000000004E78180B0000000000000AF5
-t1316493323
-s2805
-i"WebViewController.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.h
-c000000004E78180B000000000000031A
-t1316493323
-s794
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m
-c000000004E78180B0000000000000326
-t1316493323
-s806
-i"XMLHandler.h"
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default.png
-c000000004E78180B0000000000005CFB
-t1316493323
-s23803
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default@2x.png
-c000000004E78180B000000000000A876
-t1316493323
-s43126
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/English.lproj/Localizable.strings
-c000000004E78180B0000000000000778
-t1316493323
-s1912
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/German.lproj/Localizable.strings
-c000000004E78180B000000000000079A
-t1316493323
-s1946
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Italian.lproj/Localizable.strings
-c000000004E78180B000000000000079E
-t1316493323
-s1950
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib
-c000000004E7645D20000000000017B03
-t1316373970
-s97027
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Mixare_Prefix.pch
-c000000004E78180B00000000000000B5
-t1316493323
-s181
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib
-c000000004E78180B0000000000002208
-t1316493323
-s8712
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib
-c000000004E78180B000000000000278D
-t1316493323
-s10125
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app
-t1316496772
-s1462
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app.dSYM
-t1316496768
-s102
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/103-map.png
-t1316496763
-s536
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/86-camera.png
-t1316496763
-s332
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/AddPOIController.nib
-t1316496765
-s2934
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default.png
-t1316496764
-s29039
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default@2x.png
-t1316496764
-s51981
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/English.lproj/Localizable.strings
-t1316496764
-s251
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/German.lproj/Localizable.strings
-t1316496764
-s489
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Info.plist
-t1316496762
-s1463
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Italian.lproj/Localizable.strings
-t1316496764
-s461
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/MainWindow.nib
-t1316496763
-s9018
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare
-t1316496768
-s238500
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/PkgInfo
-t1316496762
-s8
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/ResourceRules.plist
-t1316496762
-s485
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/SourceCell.nib
-t1316496764
-s1880
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/WebView.nib
-t1316496764
-s1598
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo.png
-t1316496764
-s5914
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo_small.png
-t1316496764
-s3866
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/circle.png
-t1316496764
-s5039
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/dsta_tower_A.json
-t1316496764
-s25524
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision
-t1316496768
-s7452
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_datasource.png
-t1316496763
-s4298
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_edit.png
-t1316496763
-s2044
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_map.png
-t1316496763
-s4982
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white.png
-t1316496763
-s4272
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white1.png
-t1316496763
-s4387
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/list.png
-t1316496764
-s4247
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo.png
-t1316496763
-s5669
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo_mixare_round.png
-t1316496764
-s5669
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png
-t1316496764
-s7641
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png
-t1316496764
-s5651
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_512x512px.png
-t1316496764
-s29249
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_button.png
-t1316496764
-s12194
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/myhouse.json
-t1316496764
-s17142
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/singapore_HD
-t1316496764
-s102
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/source.png
-t1316496763
-s4283
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo.png
-t1316496763
-s5695
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo_small.png
-t1316496764
-s3772
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo.png
-t1316496763
-s47032
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png
-t1316496764
-s3961
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent
-t1316496768
-s613
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AddPOIController.o
-t1316496768
-s54600
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedGeoViewController.o
-t1316496767
-s44420
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedViewController.o
-t1316496767
-s100768
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Camera.o
-t1316496766
-s14936
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataHandler.o
-t1316496766
-s5300
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataSource.o
-t1316496767
-s8996
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/JsonHandler.o
-t1316496766
-s20824
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/ListViewController.o
-t1316496767
-s57180
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MapViewController.o
-t1316496768
-s63844
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MarkerView.o
-t1316496767
-s49604
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Matrix.o
-t1316496766
-s33132
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixVector.o
-t1316496766
-s17244
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Mixare.LinkFileList
-c000000004E78257A0000000000001230
-t1316496762
-s4656
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixareAppDelegate.o
-t1316496768
-s122448
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MoreViewController.o
-t1316496767
-s53864
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSObject+SBJSON.o
-t1316496766
-s7756
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSString+SBJSON.o
-t1316496766
-s7664
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PhysicalPlace.o
-t1316496767
-s13668
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PoiItem.o
-t1316496767
-s19724
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Radar.o
-t1316496767
-s46660
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/RadarViewPortView.o
-t1316496767
-s41968
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonBase.o
-t1316496766
-s13052
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonParser.o
-t1316496767
-s33816
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonWriter.o
-t1316496767
-s25412
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceTableCell.o
-t1316496767
-s40312
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceViewController.o
-t1316496767
-s66376
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlay.o
-t1316496768
-s22028
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlayView.o
-t1316496768
-s45072
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/WebViewController.o
-t1316496767
-s45004
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/XMLHandler.o
-t1316496766
-s5292
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/main.o
-t1316496766
-s6496
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/com.apple.build-tools.platform.validate
-t2
-s0
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo.png
-c000000004E78180B0000000000001811
-t1316493323
-s6161
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo_small.png
-c000000004E78180B0000000000000F3F
-t1316493323
-s3903
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/circle.png
-c000000004E78180B00000000000017A8
-t1316493323
-s6056
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/dsta_tower_A.json
-c000000004E78180B00000000000063B4
-t1316493323
-s25524
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_datasource.png
-c000000004E78180B000000000000113C
-t1316493323
-s4412
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_edit.png
-c000000004E78180B000000000000067D
-t1316493323
-s1661
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_map.png
-c000000004E78180B0000000000001250
-t1316493323
-s4688
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white.png
-c000000004E78180B0000000000000F48
-t1316493323
-s3912
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white1.png
-c000000004E78180B0000000000000FD4
-t1316493323
-s4052
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/logo.png
-c000000004E78180B00000000000014B0
-t1316493323
-s5296
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/list.png
-c000000004E78180B0000000000001181
-t1316493323
-s4481
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/logo_mixare_round.png
-c000000004E78180B00000000000014B0
-t1316493323
-s5296
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m
-c000000004E78180B000000000000015E
-t1316493323
-s350
-i<UIKit/UIKit.h>
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_114x114_72_dpi.png
-c000000004E78180B0000000000001CDE
-t1316493323
-s7390
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_57x57_72_dpi.png
-c000000004E78180B000000000000149A
-t1316493323
-s5274
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_512x512px.png
-c000000004E78180B0000000000006E4A
-t1316493323
-s28234
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_button.png
-c000000004E78180B0000000000002A8F
-t1316493323
-s10895
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/myhouse.json
-c000000004E78180B00000000000042F6
-t1316493323
-s17142
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/singapore_HD
-c000000004E78180B0000000000000088
-t1316493323
-s136
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/source.png
-c000000004E78180B0000000000001114
-t1316493323
-s4372
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo.png
-c000000004E78180B000000000000144D
-t1316493323
-s5197
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo_small.png
-c000000004E78180B0000000000000E01
-t1316493323
-s3585
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo.png
-c000000004E78180B000000000000B0E3
-t1316493323
-s45283
-
-N/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo_small.png
-c000000004E78180B0000000000000F58
-t1316493323
-s3928
-
-N/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision
-c000000004E7665ED0000000000001D1C
-t1316382189
-s7452
-
-N/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/F7AD3016-C3D3-4159-9402-8F766412D83C.mobileprovision
-c000000004E7665C40000000000001D09
-t1316382148
-s7433
-
-N/var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch.gch
-t1316496766
-s10446552
-
-NMixare-Info.plist
-c000000004E78180B00000000000007B9
-t1316493323
-s1977
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies338189562#338189562#0(0"0(0#1#0"8614304256#0"0#
-
-CCodeSign "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-s338189568.957800
-e338189572.058143
-r1
-xCodeSign
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app
-lSLF07#2@40"CodeSign build/Debug-iphoneos/Mixare.app338189568#338189572#0(0"0(0#0#102"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app8600690592#775"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: David Ho (5F454CNAD5)" "--resource-rules=/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/ResourceRules.plist" --entitlements "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AddPOIController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189568.118097
-e338189568.234858
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AddPOIController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@105"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m338189568#338189568#0(0"0(0#0#97"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m8613444544#2110"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AddPOIController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AddPOIController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedGeoViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.300028
-e338189567.409673
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedGeoViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@115"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m338189567#338189567#0(0"0(0#0#107"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m8609222944#2130"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedGeoViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedGeoViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.323449
-e338189567.588395
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@112"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m338189567#338189567#0(0"0(0#0#104"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m8608199744#2124"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/AugmentedViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/AugmentedViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Camera.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.753755
-e338189566.827509
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Camera.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@95"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m338189566#338189566#0(0"0(0#0#87"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m8613854528#2090"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Camera.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Camera.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.458725
-e338189566.588826
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataHandler.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@100"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m338189566#338189566#0(0"0(0#0#92"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m8614122368#2100"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataHandler.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataHandler.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataSource.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.588496
-e338189567.656460
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataSource.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@99"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m338189567#338189567#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m8614737440#2098"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/DataSource.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/DataSource.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/JsonHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.590513
-e338189566.694145
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/JsonHandler.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@100"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m338189566#338189566#0(0"0(0#0#92"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m8610747552#2100"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/JsonHandler.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/JsonHandler.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/ListViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.118464
-e338189567.231771
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/ListViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@107"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m338189567#338189567#0(0"0(0#0#99"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m8614487392#2114"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/ListViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/ListViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MapViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.884285
-e338189568.021822
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MapViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@106"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m338189567#338189568#0(0"0(0#0#98"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m8608936000#2112"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MapViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MapViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MarkerView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.605110
-e338189567.716239
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MarkerView.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@99"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m338189567#338189567#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m8613819744#2098"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MarkerView.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MarkerView.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Matrix.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.694252
-e338189566.871415
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Matrix.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@95"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m338189566#338189566#0(0"0(0#0#87"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m8608077536#2090"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Matrix.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Matrix.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixVector.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.656089
-e338189566.753650
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixVector.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@98"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m338189566#338189566#0(0"0(0#0#90"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m8608806176#2096"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixVector.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixVector.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixareAppDelegate.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.814372
-e338189568.108873
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixareAppDelegate.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@106"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m338189567#338189568#0(0"0(0#0#98"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m8608512640#2112"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MixareAppDelegate.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MixareAppDelegate.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MoreViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.782746
-e338189567.884167
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MoreViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@107"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m338189567#338189567#0(0"0(0#0#99"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m8609594656#2114"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/MoreViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/MoreViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSObject+SBJSON.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.827621
-e338189566.892562
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSObject+SBJSON.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@104"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m338189566#338189566#0(0"0(0#0#96"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m8614238240#2108"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSObject+SBJSON.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSObject+SBJSON.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSString+SBJSON.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.871537
-e338189566.942047
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSString+SBJSON.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@104"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m338189566#338189566#0(0"0(0#0#96"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m8613884256#2108"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/NSString+SBJSON.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/NSString+SBJSON.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PhysicalPlace.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.231876
-e338189567.323340
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PhysicalPlace.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@102"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m338189567#338189567#0(0"0(0#0#94"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m8613620064#2104"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PhysicalPlace.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PhysicalPlace.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PoiItem.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.409813
-e338189567.505264
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PoiItem.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@96"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m338189567#338189567#0(0"0(0#0#88"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m8610461344#2092"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/PoiItem.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/PoiItem.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Radar.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.656574
-e338189567.782625
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Radar.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@94"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m338189567#338189567#0(0"0(0#0#86"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m8613371328#2088"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/Radar.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Radar.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/RadarViewPortView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.716347
-e338189567.814258
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/RadarViewPortView.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@106"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m338189567#338189567#0(0"0(0#0#98"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m8610801792#2112"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/RadarViewPortView.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/RadarViewPortView.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonBase.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.892672
-e338189566.967722
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonBase.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@99"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m338189566#338189566#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m8613441472#2098"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonBase.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonBase.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonParser.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.942163
-e338189567.118347
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonParser.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@101"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m338189566#338189567#0(0"0(0#0#93"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m8608873184#2102"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonParser.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonParser.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonWriter.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.967832
-e338189567.075787
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonWriter.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@101"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m338189566#338189567#0(0"0(0#0#93"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m8608022336#2102"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SBJsonWriter.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SBJsonWriter.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceTableCell.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.206057
-e338189567.299910
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceTableCell.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@104"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m338189567#338189567#0(0"0(0#0#96"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m8613952544#2108"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceTableCell.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceTableCell.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.075898
-e338189567.205934
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@109"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m338189567#338189567#0(0"0(0#0#101"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m8613416224#2118"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/SourceViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/SourceViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlay.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189568.022024
-e338189568.117981
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlay.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@100"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m338189568#338189568#0(0"0(0#0#92"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m8614212160#2100"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlay.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlay.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlayView.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189568.108981
-e338189568.209234
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlayView.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@104"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m338189568#338189568#0(0"0(0#0#96"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m8613795264#2108"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/TileOverlayView.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/TileOverlayView.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/WebViewController.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189567.505378
-e338189567.604999
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/WebViewController.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@106"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m338189567#338189567#0(0"0(0#0#98"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m8609471520#2112"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/WebViewController.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/WebViewController.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/XMLHandler.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.588934
-e338189566.655981
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/XMLHandler.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@99"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m338189566#338189566#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m8613484192#2098"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Classes/XMLHandler.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/XMLHandler.o"0#
-
-CCompileC build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/main.o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189566.457339
-e338189566.590423
-r1
-xCompileC
-xbuild/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/main.o
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m338189566#338189566#0(0"0(0#0#77"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m8614448256#2078"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -include /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/main.m" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/main.o"0#
-
-CCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib"
-s338189564.903777
-e338189565.394821
-r1
-xCompileXIB
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib
-lSLF07#2@31"CompileXIB AddPOIController.xib338189564#338189565#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib8608921952#655"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/AddPOIController.nib" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/AddPOIController.xib" --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib"
-s338189562.515855
-e338189564.135635
-r1
-xCompileXIB
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib
-o/* com.apple.ibtool.document.warnings */
-o/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib:241: warning: Tint color is only supported with bar style segmented controls.
-lSLF07#2@25"CompileXIB MainWindow.xib338189562#338189564#0(205"/* com.apple.ibtool.document.warnings *//Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib:241: warning: Tint color is only supported with bar style segmented controls.1(22@63"Tint color is only supported with bar style segmented controls.338189564#18446744073709551615#0#0(6@85"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib338066770#241#0#241#0#0"0(0#0#85"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib8610735456#643"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/MainWindow.nib" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/MainWindow.xib" --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib"
-s338189563.603332
-e338189564.139175
-r1
-xCompileXIB
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib
-lSLF07#2@25"CompileXIB SourceCell.xib338189563#338189564#0(0"0(0#0#85"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib8613316640#643"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/SourceCell.nib" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/SourceCell.xib" --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCompileXIB "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib"
-s338189564.139274
-e338189564.653588
-r1
-xCompileXIB
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib
-lSLF07#2@22"CompileXIB WebView.xib338189564#338189564#0(0"0(0#0#82"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib8614295424#637"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/WebView.nib" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/WebView.xib" --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/103-map.png" 103-map.png
-s338189562.516804
-e338189563.157941
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/103-map.png
-x103-map.png
-lSLF07#2@67"CopyPNGFile build/Debug-iphoneos/Mixare.app/103-map.png 103-map.png338189562#338189563#0(0"0(0#0#82"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/103-map.png8610498208#663"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/103-map.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/103-map.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/86-camera.png" 86-camera.png
-s338189563.158042
-e338189563.182072
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/86-camera.png
-x86-camera.png
-lSLF07#2@71"CopyPNGFile build/Debug-iphoneos/Mixare.app/86-camera.png 86-camera.png338189563#338189563#0(0"0(0#0#84"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/86-camera.png8615289248#667"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/86-camera.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/86-camera.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default.png" Default.png
-s338189564.689204
-e338189564.821912
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default.png
-xDefault.png
-lSLF07#2@67"CopyPNGFile build/Debug-iphoneos/Mixare.app/Default.png Default.png338189564#338189564#0(0"0(0#0#82"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default.png8608600704#663"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default@2x.png" Default@2x.png
-s338189564.746315
-e338189565.002294
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default@2x.png
-xDefault@2x.png
-lSLF07#2@73"CopyPNGFile build/Debug-iphoneos/Mixare.app/Default@2x.png Default@2x.png338189564#338189565#0(0"0(0#0#85"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default@2x.png8605877952#669"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Default@2x.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Default@2x.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo.png" buzz_logo.png
-s338189564.135823
-e338189564.164569
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo.png
-xbuzz_logo.png
-lSLF07#2@71"CopyPNGFile build/Debug-iphoneos/Mixare.app/buzz_logo.png buzz_logo.png338189564#338189564#0(0"0(0#0#84"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo.png8614606464#667"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo_small.png" buzz_logo_small.png
-s338189564.538966
-e338189564.565006
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo_small.png
-xbuzz_logo_small.png
-lSLF07#2@83"CopyPNGFile build/Debug-iphoneos/Mixare.app/buzz_logo_small.png buzz_logo_small.png338189564#338189564#0(0"0(0#0#90"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo_small.png8613357376#679"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/buzz_logo_small.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/buzz_logo_small.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/circle.png" circle.png
-s338189564.193953
-e338189564.222165
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/circle.png
-xcircle.png
-lSLF07#2@65"CopyPNGFile build/Debug-iphoneos/Mixare.app/circle.png circle.png338189564#338189564#0(0"0(0#0#81"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/circle.png8613497984#661"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/circle.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/circle.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_datasource.png" icons/icon_datasource.png
-s338189563.209876
-e338189563.237625
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_datasource.png
-xicons/icon_datasource.png
-lSLF07#2@89"CopyPNGFile build/Debug-iphoneos/Mixare.app/icon_datasource.png icons/icon_datasource.png338189563#338189563#0(0"0(0#0#96"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_datasource.png8614442144#685"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_datasource.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_datasource.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_edit.png" icons/icon_edit.png
-s338189563.237724
-e338189563.265769
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_edit.png
-xicons/icon_edit.png
-lSLF07#2@77"CopyPNGFile build/Debug-iphoneos/Mixare.app/icon_edit.png icons/icon_edit.png338189563#338189563#0(0"0(0#0#90"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_edit.png8614303072#673"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_edit.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_edit.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_map.png" icons/icon_map.png
-s338189563.265870
-e338189563.294508
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_map.png
-xicons/icon_map.png
-lSLF07#2@75"CopyPNGFile build/Debug-iphoneos/Mixare.app/icon_map.png icons/icon_map.png338189563#338189563#0(0"0(0#0#89"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_map.png8614148608#671"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_map.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_map.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white.png" icons/icon_white.png
-s338189563.294615
-e338189563.353917
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white.png
-xicons/icon_white.png
-lSLF07#2@79"CopyPNGFile build/Debug-iphoneos/Mixare.app/icon_white.png icons/icon_white.png338189563#338189563#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white.png8613918208#675"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white1.png" icons/icon_white1.png
-s338189563.354024
-e338189563.383533
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white1.png
-xicons/icon_white1.png
-lSLF07#2@81"CopyPNGFile build/Debug-iphoneos/Mixare.app/icon_white1.png icons/icon_white1.png338189563#338189563#0(0"0(0#0#92"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white1.png8613854080#677"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/icon_white1.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/icon_white1.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/list.png" list.png
-s338189564.164673
-e338189564.193847
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/list.png
-xlist.png
-lSLF07#2@61"CopyPNGFile build/Debug-iphoneos/Mixare.app/list.png list.png338189564#338189564#0(0"0(0#0#79"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/list.png8613858912#657"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/list.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/list.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo.png" icons/logo.png
-s338189563.383632
-e338189563.415702
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo.png
-xicons/logo.png
-lSLF07#2@67"CopyPNGFile build/Debug-iphoneos/Mixare.app/logo.png icons/logo.png338189563#338189563#0(0"0(0#0#85"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/logo.png8613623776#663"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/icons/logo.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo_mixare_round.png" logo_mixare_round.png
-s338189564.404187
-e338189564.437286
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo_mixare_round.png
-xlogo_mixare_round.png
-lSLF07#2@87"CopyPNGFile build/Debug-iphoneos/Mixare.app/logo_mixare_round.png logo_mixare_round.png338189564#338189564#0(0"0(0#0#92"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/logo_mixare_round.png8614326816#683"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/logo_mixare_round.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/logo_mixare_round.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png" mixare-logo_114x114_72_dpi.png
-s338189564.822018
-e338189564.864381
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png
-xmixare-logo_114x114_72_dpi.png
-lSLF07#2@105"CopyPNGFile build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png mixare-logo_114x114_72_dpi.png338189564#338189564#0(0"0(0#0#101"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_114x114_72_dpi.png8613073600#701"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_114x114_72_dpi.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_114x114_72_dpi.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png" mixare-logo_57x57_72_dpi.png
-s338189564.864480
-e338189564.897485
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png
-xmixare-logo_57x57_72_dpi.png
-lSLF07#2@101"CopyPNGFile build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png mixare-logo_57x57_72_dpi.png338189564#338189564#0(0"0(0#0#99"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_57x57_72_dpi.png8610612928#697"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare-logo_57x57_72_dpi.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare-logo_57x57_72_dpi.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_512x512px.png" mixare_512x512px.png
-s338189564.222267
-e338189564.404088
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_512x512px.png
-xmixare_512x512px.png
-lSLF07#2@85"CopyPNGFile build/Debug-iphoneos/Mixare.app/mixare_512x512px.png mixare_512x512px.png338189564#338189564#0(0"0(0#0#91"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_512x512px.png8608970432#681"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_512x512px.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_512x512px.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_button.png" mixare_button.png
-s338189564.437388
-e338189564.512662
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_button.png
-xmixare_button.png
-lSLF07#2@79"CopyPNGFile build/Debug-iphoneos/Mixare.app/mixare_button.png mixare_button.png338189564#338189564#0(0"0(0#0#88"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_button.png8613609024#675"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/mixare_button.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/mixare_button.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/source.png" source.png
-s338189563.182168
-e338189563.209774
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/source.png
-xsource.png
-lSLF07#2@65"CopyPNGFile build/Debug-iphoneos/Mixare.app/source.png source.png338189563#338189563#0(0"0(0#0#81"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/source.png8614664800#661"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/source.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/source.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo.png" twitter_logo.png
-s338189563.415804
-e338189563.445465
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo.png
-xtwitter_logo.png
-lSLF07#2@77"CopyPNGFile build/Debug-iphoneos/Mixare.app/twitter_logo.png twitter_logo.png338189563#338189563#0(0"0(0#0#87"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo.png8613486368#673"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo_small.png" twitter_logo_small.png
-s338189564.512766
-e338189564.538846
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo_small.png
-xtwitter_logo_small.png
-lSLF07#2@89"CopyPNGFile build/Debug-iphoneos/Mixare.app/twitter_logo_small.png twitter_logo_small.png338189564#338189564#0(0"0(0#0#93"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo_small.png8613450080#685"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/twitter_logo_small.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/twitter_logo_small.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo.png" wikipedia_logo.png
-s338189563.445579
-e338189563.603216
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo.png
-xwikipedia_logo.png
-lSLF07#2@81"CopyPNGFile build/Debug-iphoneos/Mixare.app/wikipedia_logo.png wikipedia_logo.png338189563#338189563#0(0"0(0#0#89"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo.png8613405472#677"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo.png"0#
-
-CCopyPNGFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png" wikipedia_logo_small.png
-s338189564.565109
-e338189564.592758
-r1
-xCopyPNGFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png
-xwikipedia_logo_small.png
-lSLF07#2@93"CopyPNGFile build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png wikipedia_logo_small.png338189564#338189564#0(0"0(0#0#95"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo_small.png8613126592#689"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/wikipedia_logo_small.png" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/wikipedia_logo_small.png"0#
-
-CCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/English.lproj/Localizable.strings" English.lproj/Localizable.strings
-s338189564.592864
-e338189564.674353
-r1
-xCopyStringsFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/English.lproj/Localizable.strings
-xEnglish.lproj/Localizable.strings
-lSLF07#2@38"Copy English.lproj/Localizable.strings338189564#338189564#0(0"0(0#0#104"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/English.lproj/Localizable.strings8610685504#549"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding binary English.lproj/Localizable.strings --outdir "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/English.lproj"0#
-
-CCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/German.lproj/Localizable.strings" German.lproj/Localizable.strings
-s338189564.653708
-e338189564.689096
-r1
-xCopyStringsFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/German.lproj/Localizable.strings
-xGerman.lproj/Localizable.strings
-oGerman.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-16
-lSLF07#2@37"Copy German.lproj/Localizable.strings338189564#338189564#0(134"German.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-160(0#0#103"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/German.lproj/Localizable.strings8610366112#546"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary German.lproj/Localizable.strings --outdir "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/German.lproj"0#
-
-CCopyStringsFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Italian.lproj/Localizable.strings" Italian.lproj/Localizable.strings
-s338189564.674455
-e338189564.746208
-r1
-xCopyStringsFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Italian.lproj/Localizable.strings
-xItalian.lproj/Localizable.strings
-oItalian.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-16
-lSLF07#2@38"Copy Italian.lproj/Localizable.strings338189564#338189564#0(135"Italian.lproj/Localizable.strings: warning: the specified encoding is utf-8, but file contents appear to be UTF-16; treating as UTF-160(0#0#104"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Italian.lproj/Localizable.strings8609934848#548"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary Italian.lproj/Localizable.strings --outdir "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Italian.lproj"0#
-
-CCpResource build/Debug-iphoneos/Mixare.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-s338189562.435155
-e338189562.515723
-r1
-xCpResource
-xbuild/Debug-iphoneos/Mixare.app/ResourceRules.plist
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist338189562#338189562#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8613192448#561"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CCpResource build/Debug-iphoneos/Mixare.app/dsta_tower_A.json dsta_tower_A.json
-s338189564.899534
-e338189564.908070
-r1
-xCpResource
-xbuild/Debug-iphoneos/Mixare.app/dsta_tower_A.json
-xdsta_tower_A.json
-lSLF07#2@22"Copy dsta_tower_A.json338189564#338189564#0(0"0(0#0#88"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/dsta_tower_A.json8609234752#562"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/dsta_tower_A.json" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CCpResource build/Debug-iphoneos/Mixare.app/myhouse.json myhouse.json
-s338189564.898734
-e338189564.905516
-r1
-xCpResource
-xbuild/Debug-iphoneos/Mixare.app/myhouse.json
-xmyhouse.json
-lSLF07#2@17"Copy myhouse.json338189564#338189564#0(0"0(0#0#83"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/myhouse.json8609481408#557"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/myhouse.json" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CCpResource build/Debug-iphoneos/Mixare.app/singapore_HD singapore_HD
-s338189564.897580
-e338189564.905373
-r1
-xCpResource
-xbuild/Debug-iphoneos/Mixare.app/singapore_HD
-xsingapore_HD
-lSLF07#2@17"Copy singapore_HD338189564#338189564#0(0"0(0#0#83"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/singapore_HD8609755744#557"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/singapore_HD" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CGenerateDSYMFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app.dSYM" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare"
-s338189568.874580
-e338189568.935592
-r1
-xGenerateDSYMFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app.dSYM
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare
-lSLF07#2@92"GenerateDSYMFile build/Debug-iphoneos/Mixare.app.dSYM build/Debug-iphoneos/Mixare.app/Mixare338189568#338189568#0(0"0(0#0#109"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare8608888480#461"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app.dSYM"0#
-
-CLd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare" normal armv7
-s338189568.234959
-e338189568.874471
-r1
-xLd
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare
-xnormal
-xarmv7
-lSLF07#2@114"Link /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare338189568#338189568#0(0"0(0#0#0"8610421312#1073"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv IPHONEOS_DEPLOYMENT_TARGET 4.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk "-L/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" -filelist "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Objects-normal/armv7/Mixare.LinkFileList" -dead_strip -miphoneos-version-min=4.1 -framework QuartzCore -framework CoreMotion -framework MapKit -framework CoreLocation -framework Foundation -framework UIKit -framework CoreGraphics -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Mixare"0#
-
-CProcessInfoPlistFile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Info.plist" Mixare-Info.plist
-s338189562.436571
-e338189562.495134
-r1
-xProcessInfoPlistFile
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Info.plist
-xMixare-Info.plist
-lSLF07#2@25"Process Mixare-Info.plist338189562#338189562#0(0"0(0#0#88"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Mixare-Info.plist8613091392#694"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Mixare-Info.plist -genpkginfo "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/PkgInfo" -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/ResourceRules.plist" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/Info.plist"0#
-
-CProcessPCH /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch.gch Mixare_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s338189565.394950
-e338189566.457067
-r1
-xProcessPCH
-x/var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch.gch
-xMixare_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Mixare_Prefix.pch338189565#338189566#0(0"0(0#0#88"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Mixare_Prefix.pch8614175616#1943"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.1 -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-generated-files.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-own-target-headers.hmap" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-all-target-headers.hmap" -iquote "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare-project-headers.hmap" "-F/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/include" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources/armv7" "-I/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/DerivedSources" -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/Mixare_Prefix.pch" -o /var/folders/5T/5TIGw1xZHRieI31dqcRYEk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Mixare_Prefix-gtrcmujiylsdntanfqldsvbvaclu/Mixare_Prefix.pch.gch0#
-
-CProcessProductPackaging "/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision"
-s338189568.935704
-e338189568.937023
-r1
-xProcessProductPackaging
-x/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision
-lSLF07#2@193"ProcessProductPackaging "/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision" build/Debug-iphoneos/Mixare.app/embedded.mobileprovision338189568#338189568#0(0"0(0#0#127"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision8608169024#492"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/30B08A88-5F93-4376-BBFB-22A98AA0E0B3.mobileprovision" -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision"0#
-
-CProcessProductPackaging "/Users/EbilCat/Library/MobileDevice/Provisioning Profiles/F7AD3016-C3D3-4159-9402-8F766412D83C.mobileprovision" "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app/embedded.mobileprovision"
-r0
-
-CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent"
-s338189568.941830
-e338189568.957700
-r1
-xProcessProductPackaging
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent
-lSLF07#2@172"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent338189568#338189568#0(0"0(0#0#130"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent8608241312#497"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Mixare.build/Debug-iphoneos/Mixare.build/Mixare.xcent"0#
-
-CTouch "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-s338189568.937089
-e338189568.941719
-r1
-xTouch
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app
-lSLF07#2@108"Touch /Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app338189568#338189568#0(0"0(0#0#0"8600346912#331"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
-CValidate "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"
-s338189572.058318
-e338189572.869204
-r1
-xValidate
-x/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app
-o2011-09-20 13:32:52.238 Validation[2666:607] *** Warning: Defaulting to the standard codesign tool
-owarning: iPhone/iPod Touch: application executable is missing a required architecture.  At least one of the following architecture(s) must be present: armv6 (-19033)
-oUnable to validate your application. - (null)
-o
-lSLF07#2@40"Validate build/Debug-iphoneos/Mixare.app338189572#338189572#0(312"2011-09-20 13:32:52.238 Validation[2666:607] *** Warning: Defaulting to the standard codesign toolwarning: iPhone/iPod Touch: application executable is missing a required architecture.  At least one of the following architecture(s) must be present: armv6 (-19033)Unable to validate your application. - (null)1(22@157" iPhone/iPod Touch: application executable is missing a required architecture.  At least one of the following architecture(s) must be present: armv6 (-19033)338189572#18446744073709551615#0#0(6@0"338189572#0#0#0#0#0"0(0#0#102"/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app8615380704#440"    cd "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation "/Users/EbilCat/Desktop/iOS Development/Git Repositories/mixare-offline/build/Debug-iphoneos/Mixare.app"0#
-
