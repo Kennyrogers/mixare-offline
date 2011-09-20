@@ -17,10 +17,12 @@
 
 #import "ListViewController.h"
 #import "WebViewController.h"
-
+#import "AddPOIController.h"
 
 @implementation ListViewController
-@synthesize dataSourceArray= source; 
+
+@synthesize dataSourceArray = source;
+@synthesize addPOIButton;
 
 - (void)dealloc
 {	
@@ -28,6 +30,7 @@
 	
 	[dataSourceArray release];
 	[source release];
+	[addPOIButton release];
 	
 	[super dealloc];
 }
@@ -37,8 +40,8 @@
 - (void)viewDidLoad{	
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"Poi List", nil);
-	
 }
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
@@ -67,6 +70,11 @@
 	return 1;
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+	UITableView *tableView = (UITableView*) self.view;
+	[tableView reloadData];
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -83,9 +91,13 @@
 
 // to determine which UITableViewCell to be used on a given row.
 //
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
 	UITableViewCell *cell = nil;
 	cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil] autorelease];
+
 	if(source != nil){
 		cell.textLabel.text = [[source objectAtIndex:indexPath.row]valueForKey:@"title"];
 		cell.detailTextLabel.text = [[source objectAtIndex:indexPath.row]valueForKey:@"sum"];
@@ -102,16 +114,47 @@
     }
 	return cell;
 }
+
 #pragma mark -
 #pragma mark UITableViewDelegate
 
 // the table's selection has changed, switch to that item's UIViewController
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	/*
 	NSLog(@"in select row");
 	WebViewController *targetViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
     targetViewController.url = [[source objectAtIndex:indexPath.row]valueForKey:@"url"];
 	
 	[[self navigationController] pushViewController:targetViewController animated:YES];
+	 */
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) 
+	{
+		[source removeObjectAtIndex:indexPath.row];
+		
+		NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+		NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
+		[source writeToFile:plistPath atomically:YES];
+		
+        [tableView reloadData];
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (IBAction) AddNewPOI
+{
+	AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
+
+	[poiController setDataSourceArray:source];
+	[[self navigationController] pushViewController:poiController animated:YES];
+	[poiController release];
 }
 
 @end

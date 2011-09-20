@@ -43,6 +43,8 @@
 @property(nonatomic,retain)MKMapView *map;
 @property (nonatomic, retain) NSMutableArray * data;
 @property (nonatomic, retain) TileOverlay *overlay;
+
 -(void) mapDataToMapAnnotations;
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl;
 
 @end

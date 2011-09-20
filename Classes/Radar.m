@@ -85,6 +85,8 @@
                 x = RADIUS -poi.radialDistance/scale;
                 y = RADIUS;
             }
+			
+			CGContextSetRGBFillColor(contextRef, 0, 255, 0, 1);
             //drawing the radar point
             if([poi.source isEqualToString:@"WIKIPEDIA"]){
                 CGContextSetRGBFillColor(contextRef, 255, 0, 0, 1);

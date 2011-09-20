@@ -22,9 +22,14 @@
 	NSMutableArray *dataSourceArray;
 	int keyboardHeight;
 	//data
+    IBOutlet UIBarButtonItem * addPOIButton;
 	NSMutableArray * source;
-	
 }
 
-@property (nonatomic, retain) IBOutlet NSMutableArray *dataSourceArray;
+- (IBAction) AddNewPOI;
+
+
+@property (nonatomic, retain) NSMutableArray *dataSourceArray;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem * addPOIButton;
+
 @end
