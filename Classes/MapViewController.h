@@ -46,5 +46,5 @@
 
 -(void) mapDataToMapAnnotations;
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl;
-
+- (UIImage*)loadImage:(NSString*)imageName;
 @end
