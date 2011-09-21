@@ -256,10 +256,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65A1E67C14285A180077F775 /* AddPOIController.xib */,
 				6E774C5E142463CC00CC6F4B /* myhouse.json */,
 				6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */,
 				365F945D12AE737800286824 /* Localizable.strings */,
+				65A1E67C14285A180077F775 /* AddPOIController.xib */,
 				3626B93A12840B1600B52201 /* SourceCell.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				36A31584128D6E15002D1C57 /* WebView.xib */,

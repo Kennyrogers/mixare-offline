@@ -47,6 +47,16 @@
 @synthesize map  = _map;
 @synthesize data = _data;
 @synthesize overlay;
+
++ (CGFloat)annotationPadding;
+{
+    return 10.0f;
+}
++ (CGFloat)calloutHeight;
+{
+    return 40.0f;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
     _map.delegate= self;
@@ -133,10 +143,11 @@
 		for(NSDictionary * poi in _data){
 			tmpPlace = [[MapAnnotation alloc]init];
 			tmpPlace.title = [poi valueForKey:@"title"];
-			tmpPlace.subTitle = [poi valueForKey:@"sum"];
+//			tmpPlace.subTitle = [poi valueForKey:@"sum"];
 			tmpPlace.lat = [[poi valueForKey:@"lat"]floatValue];
 			tmpPlace.lon = [[poi valueForKey:@"lon"]floatValue];
             tmpPlace.source = [poi valueForKey:@"source"];
+            
             [self.map addAnnotation:tmpPlace];
             //[_map setNeedsLayout];
 			[tmpPlace release];
@@ -153,6 +164,22 @@
 }
 
 //- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
+//    NSLog(@"title is ... %@",((MapAnnotation*)annotation).title);
+//    UIImage *annImage = [self loadImage:((MapAnnotation*)annotation).title];
+//    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
+//   
+//
+//    
+//    
+//    annView.canShowCallout = YES;
+//    annView.calloutOffset = CGPointMake(-5, 5);
+////    UIImageView *leftIconView = [[[UIImageView alloc] initWithImage:annImage] autorelease];
+////    annView.leftCalloutAccessoryView = leftIconView;
+//    
+//    return annView;
+//}
+
+//- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
 //    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
 //    
 //    if( ((MapAnnotation*)annotation).source isEqualToString:@"WIKIPEDIA"){
@@ -165,5 +192,19 @@
 //    annView.calloutOffset = CGPointMake(-5, 5);
 //    return annView;
 //}
+
+// loading an image
+
+- (UIImage*)loadImage:(NSString*)imageName {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", imageName]];
+    
+    return [UIImage imageWithContentsOfFile:fullPath];
+    
+}
 
 @end

@@ -127,7 +127,37 @@
     targetViewController.url = [[source objectAtIndex:indexPath.row]valueForKey:@"url"];
 	
 	[[self navigationController] pushViewController:targetViewController animated:YES];
-	 */
+     */
+    
+    AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
+
+  
+    
+    NSString *title= [[source objectAtIndex:indexPath.row]valueForKey:@"title"];
+    NSString *lat= [[source objectAtIndex:indexPath.row]valueForKey:@"lat"];
+    NSString *lon= [[source objectAtIndex:indexPath.row]valueForKey:@"lon"];
+    
+    NSLog(@"selected item's Title: %@",title);
+    NSLog(@"selected item's LAT: %@",lat);
+    NSLog(@"selected item's LON: %@",lon);  
+    
+    [poiController setInitialName:title];
+    [poiController setInitialLat:lat];
+    [poiController setInitialLon:lon];
+//    [poiController setDataSourceArray:_data];
+	[poiController setInitialImage:[poiController loadImage:title]];
+    
+	
+    if(![[self.navigationController visibleViewController] isKindOfClass:[AddPOIController class]])
+    {
+        [[self navigationController] pushViewController:poiController animated:YES];
+    }
+    
+    [poiController release];
+    poiController.capture.hidden = YES;
+    poiController.choose.hidden = YES;
+    poiController.saveNewPOIButton.hidden = YES;
+	 
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
