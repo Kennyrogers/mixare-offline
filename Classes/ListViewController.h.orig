@@ -32,4 +32,5 @@
 @property (nonatomic, retain) NSMutableArray *dataSourceArray;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * addPOIButton;
 
+@property (nonatomic, retain) IBOutlet NSMutableArray *dataSourceArray;
 @end

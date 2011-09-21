@@ -16,7 +16,6 @@
  * this program. If not, see <http://www.gnu.org/licenses/> */
 
 #import "MapViewController.h"
-#import "AddPOIController.h"
 #import "TileOverlay.h"
 #import "TileOverlayView.h"
 
@@ -58,12 +57,7 @@
 //    newRegion.center.longitude = 103.743790;
 	newRegion.span.latitudeDelta = 0.03;
 	newRegion.span.longitudeDelta = 0.03;
-	[self.map setRegion:newRegion animated:YES];
-	[self mapDataToMapAnnotations];
-	[locmng release];
-	
-	self.navigationItem.title = NSLocalizedString(@"Map", nil);
-
+    
     overlay = [[TileOverlay alloc] initOverlay];
     [self.map addOverlay:overlay];
     MKMapRect visibleRect = [self.map mapRectThatFits:overlay.boundingMapRect];
@@ -72,64 +66,19 @@
     visibleRect.origin.x += visibleRect.size.width / 2;
     visibleRect.origin.y += visibleRect.size.height / 2;
     self.map.visibleMapRect = visibleRect;
-	
-	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
-	[self.map addGestureRecognizer:longPressGesture];
-	[longPressGesture release];
-
+    
+	[self.map setRegion:newRegion animated:YES];
+	[self mapDataToMapAnnotations];
+	[locmng release];
 }
-	
-- (void) viewWillAppear:(BOOL)animated
-{
-		[self mapDataToMapAnnotations];
-}
-
-
--(void)handleLongPressGesture:(UIGestureRecognizer*)sender {
-
-		// Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
-		CGPoint point = [sender locationInView:self.map];
-		CLLocationCoordinate2D locCoord = [self.map convertPoint:point toCoordinateFromView:self.map];
-		
-		AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
-		//dropPin.latitude = [NSNumber numberWithDouble:locCoord.latitude];
-		//dropPin.longitude = [NSNumber numberWithDouble:locCoord.longitude];
-		[poiController setInitialLat:[NSString stringWithFormat:@"%8lf",locCoord.latitude]];
-		[poiController setInitialLon:[NSString stringWithFormat:@"%8lf",locCoord.longitude]];	
-		[poiController setDataSourceArray:_data];
-	
-		if(![[self.navigationController visibleViewController] isKindOfClass:[AddPOIController class]])
-		{
-			[[self navigationController] pushViewController:poiController animated:YES];
-		}
-
-		[poiController release];
-
-}
-
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
 
-
-
--(void) mapDataToMapAnnotations
-{
-	if(_data != nil)
-	{
-		NSMutableArray *toRemove = [NSMutableArray arrayWithCapacity:[self.map.annotations count] ];
-		for (id annotation in self.map.annotations)
-		{
-			if (annotation != self.map.userLocation)
-			{
-				[toRemove addObject:annotation];
-			}
-		}
-		[self.map removeAnnotations:toRemove];
-
-		MapAnnotation * tmpPlace; 
+-(void) mapDataToMapAnnotations{
+	if(_data != nil){
+		MapAnnotation * tmpPlace;
 		for(NSDictionary * poi in _data){
 			tmpPlace = [[MapAnnotation alloc]init];
 			tmpPlace.title = [poi valueForKey:@"title"];
@@ -140,9 +89,19 @@
             [self.map addAnnotation:tmpPlace];
             //[_map setNeedsLayout];
 			[tmpPlace release];
-		}
-		
+		}        
 	}
+//    MapAnnotation * tmpPlace1;
+//    tmpPlace1 = [[MapAnnotation alloc]init];
+//    tmpPlace1.title = @"IMM";
+//    tmpPlace1.subTitle = @"subTitle";
+//    tmpPlace1.lat = 1.335067;
+//    tmpPlace1.lon = 103.746862;
+//    tmpPlace1.source = @"source";
+//    [self.map addAnnotation:tmpPlace1];
+//    //[_map setNeedsLayout];
+//    [tmpPlace1 release];
+
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl

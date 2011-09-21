@@ -67,6 +67,8 @@
 		36FBD05812705F3900705201 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FBD05712705F3900705201 /* DataHandler.m */; };
 		36FBD05B12705F4000705201 /* XMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FBD05A12705F4000705201 /* XMLHandler.m */; };
 		36FBD05E12705F4D00705201 /* JsonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FBD05D12705F4D00705201 /* JsonHandler.m */; };
+		65A1E67B142859FE0077F775 /* AddPOIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1E67A142859FE0077F775 /* AddPOIController.m */; };
+		65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A1E67C14285A180077F775 /* AddPOIController.xib */; };
 		6E774C4F1424622C00CC6F4B /* singapore_HD in Resources */ = {isa = PBXBuildFile; fileRef = 6E774C4E1424622C00CC6F4B /* singapore_HD */; };
 		6E774C551424637700CC6F4B /* MixareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C521424637700CC6F4B /* MixareAppDelegate.m */; };
 		6E774C561424637700CC6F4B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C541424637700CC6F4B /* MapViewController.m */; };
@@ -166,6 +168,9 @@
 		36FBD05A12705F4000705201 /* XMLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLHandler.m; sourceTree = "<group>"; };
 		36FBD05C12705F4D00705201 /* JsonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonHandler.h; sourceTree = "<group>"; };
 		36FBD05D12705F4D00705201 /* JsonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonHandler.m; sourceTree = "<group>"; };
+		65A1E679142859FE0077F775 /* AddPOIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPOIController.h; sourceTree = "<group>"; };
+		65A1E67A142859FE0077F775 /* AddPOIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPOIController.m; sourceTree = "<group>"; };
+		65A1E67C14285A180077F775 /* AddPOIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPOIController.xib; sourceTree = "<group>"; };
 		6E774C4E1424622C00CC6F4B /* singapore_HD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = singapore_HD; sourceTree = "<group>"; };
 		6E774C511424637700CC6F4B /* MixareAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareAppDelegate.h; sourceTree = "<group>"; };
 		6E774C521424637700CC6F4B /* MixareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareAppDelegate.m; sourceTree = "<group>"; };
@@ -175,8 +180,8 @@
 		6E774C59142463A400CC6F4B /* TileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlay.m; sourceTree = "<group>"; };
 		6E774C5A142463A400CC6F4B /* TileOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileOverlayView.h; sourceTree = "<group>"; };
 		6E774C5B142463A400CC6F4B /* TileOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlayView.m; sourceTree = "<group>"; };
-		6E774C5E142463CC00CC6F4B /* myhouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = myhouse.json; sourceTree = "<group>"; };
-		6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dsta_tower_A.json; sourceTree = "<group>"; };
+		6E774C5E142463CC00CC6F4B /* myhouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = myhouse.json; sourceTree = "<group>"; };
+		6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsta_tower_A.json; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Mixare-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Mixare-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +256,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65A1E67C14285A180077F775 /* AddPOIController.xib */,
 				6E774C5E142463CC00CC6F4B /* myhouse.json */,
 				6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */,
 				365F945D12AE737800286824 /* Localizable.strings */,
@@ -328,6 +334,8 @@
 			children = (
 				368B9958129BBE950044C074 /* Radar */,
 				36876BC6128BF9CF00C416F5 /* AugmentedViewControllers */,
+				65A1E679142859FE0077F775 /* AddPOIController.h */,
+				65A1E67A142859FE0077F775 /* AddPOIController.m */,
 				366A0510129BF50100F46BC3 /* MoreViewController.h */,
 				366A0511129BF50100F46BC3 /* MoreViewController.m */,
 				36A31589128D6F85002D1C57 /* WebViewController.h */,
@@ -510,6 +518,7 @@
 				6E774C4F1424622C00CC6F4B /* singapore_HD in Resources */,
 				6E774C60142463CC00CC6F4B /* myhouse.json in Resources */,
 				6E774C61142463CC00CC6F4B /* dsta_tower_A.json in Resources */,
+				65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +558,7 @@
 				6E774C561424637700CC6F4B /* MapViewController.m in Sources */,
 				6E774C5C142463A400CC6F4B /* TileOverlay.m in Sources */,
 				6E774C5D142463A400CC6F4B /* TileOverlayView.m in Sources */,
+				65A1E67B142859FE0077F775 /* AddPOIController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Xiang Ivan Tang (FUAG32526H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -581,7 +591,7 @@
 				INFOPLIST_FILE = "Mixare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = Mixare;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1EC643C-183B-4644-A6F3-34E8184A4CC8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
@@ -590,14 +600,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Xiang Ivan Tang (FUAG32526H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mixare_Prefix.pch;
 				INFOPLIST_FILE = "Mixare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = Mixare;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1EC643C-183B-4644-A6F3-34E8184A4CC8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -606,7 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -623,7 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Peer GmbH";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -631,7 +641,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "73D1A395-CE12-4F88-813B-856BC10829D2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv6 armv7";

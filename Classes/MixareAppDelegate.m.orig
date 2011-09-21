@@ -71,7 +71,6 @@
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:1]).title = NSLocalizedString(@"Sources", @"2 tabbar icon");
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:2]).title = NSLocalizedString(@"List View", @"3 tabbar icon");
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:3]).title = NSLocalizedString(@"Map", @"4 tabbar icon");
-
     NSString* licenseText = [[NSUserDefaults standardUserDefaults] objectForKey:@"mixaresFirstLounch"];
     if([licenseText isEqualToString:@""] || licenseText ==nil ) {
         UIAlertView *addAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"License",nil)message:@"Copyright (C) 2010- Peer internet solutions\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \nYou should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/" delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
@@ -270,22 +269,6 @@
     }
     return ret;
 }
-
--(void) downloadData
-{
-	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
-	
-	NSLog(@"Loading POIs from: %@", plistPath);
-	_data = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
-	
-	if(_data == nil)
-	{
-		_data = [[NSMutableArray alloc] init];
-	}
-}
-
-/*
 -(void)downloadData{
 	//NSAutoreleasePool * pool = [[NSAutoreleasePool alloc]init];
 	jHandler = [[JsonHandler alloc]init];
@@ -353,7 +336,7 @@
     }else {
         mixareData = nil;
     }
- 
+    
     //force to grab local data 
     NSLog(@"Downloading DSTA TOWER A data");
     NSString *fileLocation = [[NSBundle mainBundle] pathForResource:@"dsta_tower_A" ofType:@"json"];
@@ -394,9 +377,7 @@
 	[jHandler release];
 	//[pool release];
 }
-*/
- 
- 
+
 -(void)valueChanged:(id)sender{
 	NSLog(@"val: %f",_slider.value);
     _valueLabel.text = [NSString stringWithFormat:@"%f", _slider.value];
@@ -452,10 +433,6 @@
 	}else if([coordinate.source isEqualToString:@"BUZZ"]){
        pointView.image = [UIImage imageNamed:@"buzz_logo.png"];
 	}
-	else{
-		pointView.image = [UIImage imageNamed:@"list.png"];
-	}
-	
 	
     
 	pointView.frame = CGRectMake((int)(BOX_WIDTH / 2.0-pointView.image.size.width / 2.0), 0, pointView.image.size.width, pointView.image.size.height);
@@ -463,7 +440,6 @@
 	titleLabel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.8];
 	titleLabel.textColor = [UIColor whiteColor];
 	titleLabel.textAlignment = UITextAlignmentCenter;
-
 	titleLabel.text = coordinate.title;
     if([coordinate.source isEqualToString:@"BUZZ"]){
         //wrapping long buzz messages
@@ -534,9 +510,7 @@
 	}else{
 		//[self.locManager stopUpdatingHeading];
 	}
-	
     
-	
     if(tabBarController.selectedIndex == 0 ){
         notificationView.center = window.center;
         [window addSubview:notificationView];
