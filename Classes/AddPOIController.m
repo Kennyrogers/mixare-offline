@@ -170,7 +170,7 @@
 
 - (void)saveImage:(UIImage*)img:(NSString*)imgName {
     
-    NSData *imageData = UIImagePNGRepresentation(img); //convert image into .png format.
+    NSData *imageData = UIImageJPEGRepresentation(img,1.0); //convert image into .jpeg format.
     
     NSFileManager *fileManager = [NSFileManager defaultManager];//create instance of NSFileManager
     
@@ -178,7 +178,7 @@
     
     NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
     
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", imgName]]; //add our image to the path
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imgName]]; //add our image to the path
     
     [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
     
@@ -193,7 +193,7 @@
     
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", imageName]];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]];
     
     return [UIImage imageWithContentsOfFile:fullPath];
     

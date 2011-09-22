@@ -201,7 +201,7 @@
     
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", imageName]];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]];
     
     return [UIImage imageWithContentsOfFile:fullPath];
     
