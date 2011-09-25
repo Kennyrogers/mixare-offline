@@ -69,6 +69,8 @@
 		36FBD05E12705F4D00705201 /* JsonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FBD05D12705F4D00705201 /* JsonHandler.m */; };
 		65A1E67B142859FE0077F775 /* AddPOIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A1E67A142859FE0077F775 /* AddPOIController.m */; };
 		65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A1E67C14285A180077F775 /* AddPOIController.xib */; };
+		65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 65ABA05B142C9D3E00E45B66 /* button_general_delete.png */; };
+		65E5A46C142B1F37009B7E1B /* MixareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E5A46B142B1F37009B7E1B /* MixareUtils.m */; };
 		6E774C4F1424622C00CC6F4B /* singapore_HD in Resources */ = {isa = PBXBuildFile; fileRef = 6E774C4E1424622C00CC6F4B /* singapore_HD */; };
 		6E774C551424637700CC6F4B /* MixareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C521424637700CC6F4B /* MixareAppDelegate.m */; };
 		6E774C561424637700CC6F4B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C541424637700CC6F4B /* MapViewController.m */; };
@@ -171,6 +173,9 @@
 		65A1E679142859FE0077F775 /* AddPOIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPOIController.h; sourceTree = "<group>"; };
 		65A1E67A142859FE0077F775 /* AddPOIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPOIController.m; sourceTree = "<group>"; };
 		65A1E67C14285A180077F775 /* AddPOIController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPOIController.xib; sourceTree = "<group>"; };
+		65ABA05B142C9D3E00E45B66 /* button_general_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_general_delete.png; sourceTree = "<group>"; };
+		65E5A46A142B1F37009B7E1B /* MixareUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareUtils.h; sourceTree = "<group>"; };
+		65E5A46B142B1F37009B7E1B /* MixareUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareUtils.m; sourceTree = "<group>"; };
 		6E774C4E1424622C00CC6F4B /* singapore_HD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = singapore_HD; sourceTree = "<group>"; };
 		6E774C511424637700CC6F4B /* MixareAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareAppDelegate.h; sourceTree = "<group>"; };
 		6E774C521424637700CC6F4B /* MixareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareAppDelegate.m; sourceTree = "<group>"; };
@@ -211,6 +216,8 @@
 				6E774C521424637700CC6F4B /* MixareAppDelegate.m */,
 				6E774C531424637700CC6F4B /* MapViewController.h */,
 				6E774C541424637700CC6F4B /* MapViewController.m */,
+				65E5A46A142B1F37009B7E1B /* MixareUtils.h */,
+				65E5A46B142B1F37009B7E1B /* MixareUtils.m */,
 				366C8CEE127172030082CB57 /* render */,
 				366FD7EE127041BE00EAC466 /* reality */,
 				366FD7ED127041A500EAC466 /* gui */,
@@ -391,6 +398,7 @@
 				6E774C4E1424622C00CC6F4B /* singapore_HD */,
 				3687864E12AD174E000FBAA1 /* twitter_logo_small.png */,
 				3687864F12AD174E000FBAA1 /* buzz_logo_small.png */,
+				65ABA05B142C9D3E00E45B66 /* button_general_delete.png */,
 				3687865012AD174E000FBAA1 /* wikipedia_logo_small.png */,
 				36A43B85129CFF9D0016119D /* mixare_button.png */,
 				366A0508129BF41B00F46BC3 /* logo_mixare_round.png */,
@@ -519,6 +527,7 @@
 				6E774C60142463CC00CC6F4B /* myhouse.json in Resources */,
 				6E774C61142463CC00CC6F4B /* dsta_tower_A.json in Resources */,
 				65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */,
+				65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +568,7 @@
 				6E774C5C142463A400CC6F4B /* TileOverlay.m in Sources */,
 				6E774C5D142463A400CC6F4B /* TileOverlayView.m in Sources */,
 				65A1E67B142859FE0077F775 /* AddPOIController.m in Sources */,
+				65E5A46C142B1F37009B7E1B /* MixareUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
