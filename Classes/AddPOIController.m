@@ -148,15 +148,11 @@
 
 
 - (IBAction)grabImage:(UIButton *)sender{
-//    UIButton *senderButt = (UIButton *)sender;
-
     
     if(sender.tag == 1)
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     if(sender.tag == 2)
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        
-
 
 	[self presentModalViewController:self.imgPicker animated:YES];
 }

@@ -34,17 +34,28 @@
 @property (nonatomic,retain) NSString * title;
 @property (nonatomic,retain) NSString * subTitle;
 @property (nonatomic,retain) NSString *source;
+
+
+
 @end
 
-@interface MapViewController : UIViewController <MKMapViewDelegate> {
+@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate> {
 	IBOutlet MKMapView* _map;
+	MKCoordinateRegion _focusArea;
 	NSMutableArray *_data;
+	
+	CLLocationCoordinate2D _longPressedCoords;
 }
+
+@property (nonatomic) CLLocationCoordinate2D longPressedCoords;
 @property(nonatomic,retain)MKMapView *map;
+@property (nonatomic) MKCoordinateRegion focusArea;
 @property (nonatomic, retain) NSMutableArray * data;
 @property (nonatomic, retain) TileOverlay *overlay;
 
 -(void) mapDataToMapAnnotations;
+- (void) AnnotationInfoButtonClick:(id)sender;
+- (void) AnnotationDeleteButtonClick:(id)sender;
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl;
 - (UIImage*)loadImage:(NSString*)imageName;
 @end

@@ -18,8 +18,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "JsonHandler.h"
+
+#import "MapViewController.h"
+
 @interface ListViewController : UITableViewController<UITableViewDelegate>  {
 	NSMutableArray *dataSourceArray;
+	UITabBarController *tabBarController;
+	MapViewController *mapViewController;
+	
+	
 	int keyboardHeight;
 	//data
     IBOutlet UIBarButtonItem * addPOIButton;
@@ -29,6 +36,8 @@
 - (IBAction) AddNewPOI;
 
 
+@property (nonatomic, retain) UITabBarController *tabBarController;
+@property (nonatomic, retain) MapViewController *mapViewController;
 @property (nonatomic, retain) NSMutableArray *dataSourceArray;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem * addPOIButton;
 

@@ -23,6 +23,7 @@
 #import "JsonHandler.h"
 #import "PhysicalPlace.h"
 #import "DataSource.h"
+#import "MixareUtils.h"
 #define degreesToRadian(x) (M_PI * (x) / 180.0)
  
 
@@ -54,9 +55,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	//[window addSubview:_tabBarController.view];
+
 	[self initLocationManager];
-	//[NSThread detachNewThreadSelector:@selector(downloadData) toTarget:self withObject:nil];
    
 	[[NSUserDefaults standardUserDefaults] setObject:@"TRUE" forKey:@"Wikipedia"];
    
@@ -79,7 +79,7 @@
         [addAlert release];
         [[NSUserDefaults standardUserDefaults] setObject:@"TRUE" forKey:@"mixaresFirstLounch"];
     }
-    
+   
     return YES;
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
@@ -150,7 +150,7 @@
 	[self mapData];
     
 	if(_locManager != nil){
-		augViewController.centerLocation = _locManager.location;
+		augViewController.centerLocation = [[[CLLocation alloc] initWithLatitude:[MixareUtils GetUserPosition].latitude longitude:[MixareUtils GetUserPosition].longitude] autorelease];
 	}
     [self initControls];
     [notificationView removeFromSuperview];
@@ -427,6 +427,7 @@
         window.rootViewController = _tabBarController;
         [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+
 	}else if(_menuButton.selectedSegmentIndex ==  1){
 		_slider.hidden = NO;
         _valueLabel.hidden = NO;
@@ -535,8 +536,6 @@
 		//[self.locManager stopUpdatingHeading];
 	}
 	
-    
-	
     if(tabBarController.selectedIndex == 0 ){
         notificationView.center = window.center;
         [window addSubview:notificationView];
@@ -560,6 +559,8 @@
                 _listViewController.dataSourceArray =nil;
                 NSLog(@"data set");
                 [_listViewController setDataSourceArray:_data];
+				[_listViewController setTabBarController:_tabBarController];
+				[_listViewController setMapViewController:_mapViewController];
                 [_listViewController.tableView reloadData];
                 NSLog(@"elements in data: %d in datasource: %d", [_data count], [_listViewController.dataSourceArray count]);
             }else{

@@ -21,6 +21,8 @@
 
 @implementation ListViewController
 
+@synthesize tabBarController;
+@synthesize mapViewController;
 @synthesize dataSourceArray = source;
 @synthesize addPOIButton;
 
@@ -122,16 +124,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	/*
-	NSLog(@"in select row");
-	WebViewController *targetViewController = [[WebViewController alloc] initWithNibName:@"WebView" bundle:nil];
-    targetViewController.url = [[source objectAtIndex:indexPath.row]valueForKey:@"url"];
-	
-	[[self navigationController] pushViewController:targetViewController animated:YES];
-     */
     
     AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
-
-  
     
     NSString *title= [[source objectAtIndex:indexPath.row]valueForKey:@"title"];
     NSString *lat= [[source objectAtIndex:indexPath.row]valueForKey:@"lat"];
@@ -157,7 +151,18 @@
     poiController.capture.hidden = YES;
     poiController.choose.hidden = YES;
     poiController.saveNewPOIButton.hidden = YES;
-	 
+	 */
+
+	MKCoordinateRegion focusArea;
+	focusArea.center.latitude = [[[source objectAtIndex:indexPath.row]valueForKey:@"lat"] floatValue];
+	focusArea.center.longitude = [[[source objectAtIndex:indexPath.row]valueForKey:@"lon"] floatValue];
+	focusArea.span.latitudeDelta = 0.03;
+	focusArea.span.latitudeDelta = 0.03;
+	mapViewController.focusArea = focusArea;
+	
+	tabBarController.selectedIndex = 3;
+	[mapViewController setData:source];
+	[mapViewController mapDataToMapAnnotations];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

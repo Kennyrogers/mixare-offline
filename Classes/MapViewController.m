@@ -19,6 +19,7 @@
 #import "AddPOIController.h"
 #import "TileOverlay.h"
 #import "TileOverlayView.h"
+#import "MixareUtils.h"
 
 
 @implementation MapAnnotation
@@ -45,8 +46,10 @@
 
 @implementation MapViewController
 @synthesize map  = _map;
+@synthesize focusArea = _focusArea;
 @synthesize data = _data;
 @synthesize overlay;
+@synthesize longPressedCoords = _longPressedCoords;
 
 + (CGFloat)annotationPadding;
 {
@@ -61,16 +64,13 @@
 	[super viewDidLoad];
     _map.delegate= self;
 	MKCoordinateRegion newRegion;
-	CLLocationManager* locmng = [[CLLocationManager alloc]init];
-	newRegion.center.latitude = locmng.location.coordinate.latitude;
-	newRegion.center.longitude = locmng.location.coordinate.longitude;
-//    newRegion.center.latitude = 1.338701;
-//    newRegion.center.longitude = 103.743790;
+	CLLocationCoordinate2D userLocation = [MixareUtils GetUserPosition];
+	newRegion.center.latitude = userLocation.latitude;
+	newRegion.center.longitude = userLocation.longitude;
 	newRegion.span.latitudeDelta = 0.03;
 	newRegion.span.longitudeDelta = 0.03;
-	[self.map setRegion:newRegion animated:YES];
+
 	[self mapDataToMapAnnotations];
-	[locmng release];
 	
 	self.navigationItem.title = NSLocalizedString(@"Map", nil);
 
@@ -86,35 +86,68 @@
 	UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
 	[self.map addGestureRecognizer:longPressGesture];
 	[longPressGesture release];
+	
+	[self.map setRegion:newRegion animated:YES];
 
 }
-	
+
 - (void) viewWillAppear:(BOOL)animated
 {
-		[self mapDataToMapAnnotations];
+	[self mapDataToMapAnnotations];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+	if (_focusArea.center.latitude != 0.0 && _focusArea.center.longitude != 0.0) {
+		[self.map setRegion:_focusArea animated:YES];
+	}
+	
+	_focusArea.center.latitude = 0.0;
+	_focusArea.center.longitude = 0.0;
+	_focusArea.span.latitudeDelta = 0.0;
+	_focusArea.span.longitudeDelta = 0.0;
 }
 
 
 -(void)handleLongPressGesture:(UIGestureRecognizer*)sender {
-
-		// Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
-		CGPoint point = [sender locationInView:self.map];
-		CLLocationCoordinate2D locCoord = [self.map convertPoint:point toCoordinateFromView:self.map];
-		
-		AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
-		//dropPin.latitude = [NSNumber numberWithDouble:locCoord.latitude];
-		//dropPin.longitude = [NSNumber numberWithDouble:locCoord.longitude];
-		[poiController setInitialLat:[NSString stringWithFormat:@"%8lf",locCoord.latitude]];
-		[poiController setInitialLon:[NSString stringWithFormat:@"%8lf",locCoord.longitude]];	
-		[poiController setDataSourceArray:_data];
 	
+	if (sender.state == UIGestureRecognizerStateBegan) {
+		UIAlertView *alert = [[UIAlertView alloc] init];
+		[alert setTitle:@"Options"];
+		[alert setMessage:@"Insert POI here, or manually specify user location ?"];
+		[alert setDelegate:self];
+		[alert addButtonWithTitle:@"POI"];
+		[alert addButtonWithTitle:@"User Location"];
+		[alert show];
+		[alert release];
+		
+		CGPoint point = [sender locationInView:self.map];
+		_longPressedCoords = [self.map convertPoint:point toCoordinateFromView:self.map];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0) //POI
+	{
+		// Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
+		AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
+		[poiController setInitialLat:[NSString stringWithFormat:@"%8lf", _longPressedCoords.latitude]];
+		[poiController setInitialLon:[NSString stringWithFormat:@"%8lf", _longPressedCoords.longitude]];	
+		[poiController setDataSourceArray:_data];
+		
 		if(![[self.navigationController visibleViewController] isKindOfClass:[AddPOIController class]])
 		{
 			[[self navigationController] pushViewController:poiController animated:YES];
 		}
-
+		
 		[poiController release];
-
+	}
+	else if (buttonIndex == 1) //User Location
+	{
+		MixareUtils.userProvidedLocation = _longPressedCoords;
+		[self mapDataToMapAnnotations];
+	}
 }
 
 
@@ -143,15 +176,25 @@
 		for(NSDictionary * poi in _data){
 			tmpPlace = [[MapAnnotation alloc]init];
 			tmpPlace.title = [poi valueForKey:@"title"];
-//			tmpPlace.subTitle = [poi valueForKey:@"sum"];
 			tmpPlace.lat = [[poi valueForKey:@"lat"]floatValue];
 			tmpPlace.lon = [[poi valueForKey:@"lon"]floatValue];
             tmpPlace.source = [poi valueForKey:@"source"];
             
             [self.map addAnnotation:tmpPlace];
-            //[_map setNeedsLayout];
 			[tmpPlace release];
 		}
+		
+		if ([MixareUtils isCustomUserLocSet]) {
+			tmpPlace = [[MapAnnotation alloc]init];
+			tmpPlace.title = @"Custom User Location";
+			tmpPlace.lat = [MixareUtils GetUserPosition].latitude;
+			tmpPlace.lon = [MixareUtils GetUserPosition].longitude;
+			tmpPlace.source = @"";
+			
+			[self.map addAnnotation:tmpPlace];
+			[tmpPlace release];
+		}
+
 		
 	}
 }
@@ -163,21 +206,98 @@
     return [view autorelease];
 }
 
-//- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
-//    NSLog(@"title is ... %@",((MapAnnotation*)annotation).title);
-//    UIImage *annImage = [self loadImage:((MapAnnotation*)annotation).title];
-//    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
-//   
-//
-//    
-//    
-//    annView.canShowCallout = YES;
-//    annView.calloutOffset = CGPointMake(-5, 5);
-////    UIImageView *leftIconView = [[[UIImageView alloc] initWithImage:annImage] autorelease];
-////    annView.leftCalloutAccessoryView = leftIconView;
-//    
-//    return annView;
-//}
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
+	
+	if (annotation == self.map.userLocation) {
+		return nil;
+	}
+
+	MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
+	annView.canShowCallout = YES;    
+	annView.calloutOffset = CGPointMake(-5, 5);
+
+	UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	UIImage *image = [UIImage imageNamed:@"button_general_delete.png"];
+	deleteButton.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+	[deleteButton addTarget:self action:@selector(AnnotationDeleteButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+	[deleteButton setImage:image forState:UIControlStateNormal];
+	[deleteButton setTag:[self.map.annotations indexOfObject:annotation]];
+	annView.leftCalloutAccessoryView = deleteButton;
+
+	if([annotation title] == @"Custom User Location")
+	{
+		annView.pinColor = MKPinAnnotationColorGreen;
+		return annView;
+	}
+
+	UIButton *moreInfoButton = [UIButton buttonWithType: UIButtonTypeDetailDisclosure]; 
+	[moreInfoButton addTarget:self action:@selector(AnnotationInfoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+	[moreInfoButton setTag:[self.map.annotations indexOfObject:annotation]];
+	annView.rightCalloutAccessoryView = moreInfoButton;
+
+	return annView;
+}
+
+
+- (void) AnnotationInfoButtonClick:(id)sender
+{
+	NSLog(@"Tag No: %d", ((UIButton*) sender).tag);
+	
+	id<MKAnnotation> anno = [self.map.annotations objectAtIndex:((UIButton*) sender).tag];
+	NSLog(@"Info Annotation Button Clicked: %@", [anno title]);
+	
+	AddPOIController *poiController = [[AddPOIController alloc] initWithNibName:@"AddPOIController" bundle:nil];
+
+    NSString *title= [anno title];
+    NSString *lat= [NSString stringWithFormat:@"%8lf", [anno coordinate].latitude];
+    NSString *lon= [NSString stringWithFormat:@"%8lf", [anno coordinate].longitude];
+    
+    [poiController setInitialName:title];
+    [poiController setInitialLat:lat];
+    [poiController setInitialLon:lon];
+
+	[poiController setInitialImage:[poiController loadImage:title]];
+    
+	
+    if(![[self.navigationController visibleViewController] isKindOfClass:[AddPOIController class]])
+    {
+        [[self navigationController] pushViewController:poiController animated:YES];
+    }
+    
+    poiController.capture.hidden = YES;
+    poiController.choose.hidden = YES;
+    poiController.saveNewPOIButton.hidden = YES;
+	
+	[poiController release];
+}
+
+- (void) AnnotationDeleteButtonClick:(id)sender
+{
+	id<MKAnnotation> anno = [self.map.annotations objectAtIndex:((UIButton*) sender).tag];
+	NSLog(@"Delete Annotation Button Clicked: %@", [anno title]);
+	
+	if ([anno title] == @"Custom User Location") {
+		[MixareUtils setUserProvidedLocation:CLLocationCoordinate2DMake(0,0)];
+	}
+	else {
+		for (int x=0; x < [_data count]; x++) {
+			NSDictionary *poiEntry = [_data objectAtIndex:x];
+			if ([poiEntry valueForKey:@"title"] == [anno title]){
+				[_data removeObjectAtIndex:x];
+				break;
+			}
+		}
+	}	
+
+	
+	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
+	[_data writeToFile:plistPath atomically:YES];
+	
+	[self mapDataToMapAnnotations];
+}
+
+
 
 //- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
 //    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
