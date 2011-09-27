@@ -7,7 +7,9 @@
 //
 
 #import "AddPOIController.h"
-
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "MixareUtils.h"
 
 @implementation AddPOIController
 
@@ -15,6 +17,7 @@
 @synthesize initialLat = _initialLat;
 @synthesize initialLon = _initialLon;
 @synthesize initialImage = _initialImage;
+
 
 @synthesize labelName;
 @synthesize labelLat;
@@ -33,16 +36,19 @@
 
 
 @synthesize imgPicker;
+@synthesize imgInfo;
+
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
+ - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+ self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+ if (self) {
+ // Custom initialization.
+ }
+ return self;
+ }
+ */
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -55,7 +61,7 @@
     [image setImage:_initialImage];
     
     self.imgPicker = [[UIImagePickerController alloc]init];
-    self.imgPicker.allowsEditing = YES;
+    self.imgPicker.allowsEditing = NO;
     self.imgPicker.delegate = self;
     
     
@@ -63,12 +69,12 @@
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -90,7 +96,8 @@
 	[_initialLat release];
 	[_initialLon release];	
     [_initialImage release];
-	
+	[imgInfo release];
+    
 	[labelName release];
 	[labelLat release];
 	[labelLon release];
@@ -116,31 +123,46 @@
 {
 	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
-
+    
 	NSLog(@"Name : %@", textFieldName.text);
 	NSLog(@"Lat : %@", textFieldLat.text);
 	NSLog(@"Lon : %@", textFieldLon.text);
     
 	
 	[source addObject:[NSDictionary dictionaryWithObjectsAndKeys: textFieldName.text, @"title", textFieldLat.text, @"lat",textFieldLon.text, @"lon", nil]];
-
+    
 	NSLog(@"POIs saved to: %@", plistPath);
 	
 	[source writeToFile:plistPath atomically:YES];
-
+    
 	//[poiArray release];
     
-
+    
     
     
     
     //saving image to photo library
-//    UIImageWriteToSavedPhotosAlbum(image.image, self, nil, nil);
+    //    UIImageWriteToSavedPhotosAlbum(image.image, self, nil, nil);
+    //getting the assets library
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    ALAssetsLibraryWriteImageCompletionBlock imageWriteCompletionBlock = ^(NSURL *newURL, NSError *error){
+        UIAlertView *alert;
+        
+        if(error)
+            alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Error saving image with metadata to Photo Library" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
+        else
+            alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Image with EXIF data saved to Photo Album" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
+        
+        [alert show];
+        [alert release];
+    };
     
+       
+    [library writeImageToSavedPhotosAlbum:[image.image CGImage] metadata:[MixareUtils updateMetadata:imgInfo :[NSString stringWithFormat:@"Target: [latitude = %@ longitude = %@]", textFieldLat.text, textFieldLon.text]] completionBlock:imageWriteCompletionBlock];
     
     //saving image to app's sandbox
-    [self saveImage:image.image:textFieldName.text];
-
+    
+    [MixareUtils saveImage:image.image :textFieldName.text];
 	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
@@ -148,52 +170,57 @@
 
 
 - (IBAction)grabImage:(UIButton *)sender{
+    //    UIButton *senderButt = (UIButton *)sender;
+    
     
     if(sender.tag == 1)
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     if(sender.tag == 2)
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-
+    
+    
+    
 	[self presentModalViewController:self.imgPicker animated:YES];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo {
-	image.image = img;	
-	[[picker parentViewController] dismissModalViewControllerAnimated:YES];
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo {
+//    imgInfo = editInfo;
+//	image.image = img;	
+//	[[picker parentViewController] dismissModalViewControllerAnimated:YES];
+//}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    UIImage *originalImage; /*, *editedImage, *imageToSave;*/
+    
+    //handle a still image capture
+    if (CFStringCompare((CFStringRef)mediaType, kUTTypeImage, 0)==kCFCompareEqualTo)
+    {
+
+        originalImage = (UIImage *) [info objectForKey: UIImagePickerControllerOriginalImage];
+         
+        //getting the image metadata only if picker source is camera
+        UIImagePickerControllerSourceType pickerType = picker.sourceType;
+        if(pickerType == UIImagePickerControllerSourceTypeCamera || pickerType == UIImagePickerControllerSourceTypePhotoLibrary)
+        {
+            NSDictionary *imageMetadata = [info objectForKey: UIImagePickerControllerMediaMetadata];
+                        
+            //saving imageMetadata for editing later.
+            imgInfo = [[NSMutableDictionary alloc]initWithCapacity:[imageMetadata count]];
+            NSEnumerator *enumerator = [imageMetadata keyEnumerator];
+            id key;
+            while((key = [enumerator nextObject]))
+            {
+                [imgInfo setObject:[imageMetadata valueForKey:key] forKey:(NSString *)key];
+            }
+        }
+    }
+    image.image = originalImage;
+    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [picker release];
 }
 
-//saving an image
-
-- (void)saveImage:(UIImage*)img:(NSString*)imgName {
-    
-    NSData *imageData = UIImageJPEGRepresentation(img,1.0); //convert image into .jpeg format.
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];//create instance of NSFileManager
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //create an array and store result of our search for the documents directory in it
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
-    
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imgName]]; //add our image to the path
-    
-    [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
-    
-    NSLog(@"image saved");
-    
-}
-
-// loading an image
-- (UIImage*)loadImage:(NSString*)imageName {
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]];
-    
-    return [UIImage imageWithContentsOfFile:fullPath];
-    
-}
 
 
 

@@ -256,7 +256,7 @@
     [poiController setInitialLat:lat];
     [poiController setInitialLon:lon];
 
-	[poiController setInitialImage:[poiController loadImage:title]];
+	[poiController setInitialImage:[MixareUtils loadImage:title]];
     
 	
     if(![[self.navigationController visibleViewController] isKindOfClass:[AddPOIController class]])
@@ -313,18 +313,6 @@
 //    return annView;
 //}
 
-// loading an image
 
-- (UIImage*)loadImage:(NSString*)imageName {
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]];
-    
-    return [UIImage imageWithContentsOfFile:fullPath];
-    
-}
 
 @end

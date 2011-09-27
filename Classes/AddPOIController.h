@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface AddPOIController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> 
@@ -16,7 +17,9 @@
 	NSString *_initialLat;
 	NSString *_initialLon;
     UIImage *_initialImage;
-	
+    NSMutableDictionary *imgInfo;
+    
+    
 	IBOutlet UILabel *labelName;
 	IBOutlet UILabel *labelLat;
 	IBOutlet UILabel *labelLon;
@@ -39,6 +42,8 @@
 @property (nonatomic, retain) NSString *initialLon;
 @property (nonatomic, retain) UIImage *initialImage;
 
+@property (retain) NSMutableDictionary *imgInfo;
+
 @property (nonatomic, retain) IBOutlet UILabel *labelName;
 @property (nonatomic, retain) IBOutlet UILabel *labelLat;
 @property (nonatomic, retain) IBOutlet UILabel *labelLon;
@@ -60,8 +65,6 @@
 
 - (IBAction) grabImage: (id)sender;
 
-- (void)saveImage:(UIImage*)img:(NSString*)imageName;
-- (UIImage*)loadImage:(NSString*)imageName;
 
 @property (nonatomic, retain) UIImagePickerController *imgPicker;
 

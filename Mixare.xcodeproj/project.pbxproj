@@ -71,6 +71,9 @@
 		65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A1E67C14285A180077F775 /* AddPOIController.xib */; };
 		65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 65ABA05B142C9D3E00E45B66 /* button_general_delete.png */; };
 		65E5A46C142B1F37009B7E1B /* MixareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E5A46B142B1F37009B7E1B /* MixareUtils.m */; };
+		6E5CD145143048D900453381 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD144143048D900453381 /* ImageIO.framework */; };
+		6E5CD148143048E000453381 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD147143048E000453381 /* MobileCoreServices.framework */; };
+		6E5CD14A143048EF00453381 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD149143048EF00453381 /* AssetsLibrary.framework */; };
 		6E774C4F1424622C00CC6F4B /* singapore_HD in Resources */ = {isa = PBXBuildFile; fileRef = 6E774C4E1424622C00CC6F4B /* singapore_HD */; };
 		6E774C551424637700CC6F4B /* MixareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C521424637700CC6F4B /* MixareAppDelegate.m */; };
 		6E774C561424637700CC6F4B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C541424637700CC6F4B /* MapViewController.m */; };
@@ -176,6 +179,9 @@
 		65ABA05B142C9D3E00E45B66 /* button_general_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_general_delete.png; sourceTree = "<group>"; };
 		65E5A46A142B1F37009B7E1B /* MixareUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareUtils.h; sourceTree = "<group>"; };
 		65E5A46B142B1F37009B7E1B /* MixareUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareUtils.m; sourceTree = "<group>"; };
+		6E5CD144143048D900453381 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6E5CD147143048E000453381 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6E5CD149143048EF00453381 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		6E774C4E1424622C00CC6F4B /* singapore_HD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = singapore_HD; sourceTree = "<group>"; };
 		6E774C511424637700CC6F4B /* MixareAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareAppDelegate.h; sourceTree = "<group>"; };
 		6E774C521424637700CC6F4B /* MixareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareAppDelegate.m; sourceTree = "<group>"; };
@@ -195,6 +201,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5CD14A143048EF00453381 /* AssetsLibrary.framework in Frameworks */,
+				6E5CD148143048E000453381 /* MobileCoreServices.framework in Frameworks */,
+				6E5CD145143048D900453381 /* ImageIO.framework in Frameworks */,
 				36876BD4128BFFCC00C416F5 /* QuartzCore.framework in Frameworks */,
 				367ADBAE1280598900324124 /* CoreMotion.framework in Frameworks */,
 				3685BA2E12756566005FF922 /* MapKit.framework in Frameworks */,
@@ -278,6 +287,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E5CD149143048EF00453381 /* AssetsLibrary.framework */,
+				6E5CD147143048E000453381 /* MobileCoreServices.framework */,
+				6E5CD144143048D900453381 /* ImageIO.framework */,
 				36876BD3128BFFCC00C416F5 /* QuartzCore.framework */,
 				367ADBAD1280598900324124 /* CoreMotion.framework */,
 				3685BA2D12756566005FF922 /* MapKit.framework */,

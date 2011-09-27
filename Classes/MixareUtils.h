@@ -16,5 +16,10 @@
 + (CLLocationCoordinate2D) GetUserPosition;
 + (void) setUserProvidedLocation:(CLLocationCoordinate2D)loc;
 + (BOOL) isCustomUserLocSet;
++ (void)saveImage:(UIImage*)img:(NSString*)imgName;
++ (UIImage*)loadImage:(NSString*)imageName;
++(NSMutableDictionary *)updateMetadata:(NSMutableDictionary *)metadataAsMutable:(NSString *)userComment;
++(NSMutableDictionary *)updateEXIFDicationary:(NSMutableDictionary *)exifDict:(NSString *)userComment;
++(NSMutableDictionary *)updateGPSDictionary:(NSMutableDictionary *)gpsDict;
 
 @end

@@ -57,5 +57,4 @@
 - (void) AnnotationInfoButtonClick:(id)sender;
 - (void) AnnotationDeleteButtonClick:(id)sender;
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl;
-- (UIImage*)loadImage:(NSString*)imageName;
 @end
