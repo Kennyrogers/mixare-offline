@@ -78,6 +78,9 @@
         [addAlert show];
         [addAlert release];
         [[NSUserDefaults standardUserDefaults] setObject:@"TRUE" forKey:@"mixaresFirstLounch"];
+		
+		//If first time launching, default to using Satellite imagery
+        [[NSUserDefaults standardUserDefaults] setObject:@"TILES_SAT" forKey:@"mapTilesToDisplay"];
     }
    
     return YES;

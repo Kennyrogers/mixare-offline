@@ -151,7 +151,6 @@
 }
 
 
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
@@ -194,9 +193,26 @@
 			[self.map addAnnotation:tmpPlace];
 			[tmpPlace release];
 		}
-
-		
 	}
+}
+
+- (IBAction) ToggleMapTiles:(id)sender
+{
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	
+	// getting an NSString
+	NSString *tilePreference = [prefs stringForKey:@"mapTilesToDisplay"];
+	
+	if (tilePreference == @"TILES_SAT") {
+		[prefs setObject:@"TILES_TOPO" forKey:@"mapTilesToDisplay"];
+	}
+	else {
+		[prefs setObject:@"TILES_SAT" forKey:@"mapTilesToDisplay"];
+	}
+	
+	[self.map removeOverlay:overlay];
+	overlay = [[TileOverlay alloc] initOverlay];
+    [self.map addOverlay:overlay];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl
@@ -239,7 +255,7 @@
 }
 
 
-- (void) AnnotationInfoButtonClick:(id)sender
+- (IBAction) AnnotationInfoButtonClick:(id)sender
 {
 	NSLog(@"Tag No: %d", ((UIButton*) sender).tag);
 	
@@ -271,7 +287,7 @@
 	[poiController release];
 }
 
-- (void) AnnotationDeleteButtonClick:(id)sender
+- (IBAction) AnnotationDeleteButtonClick:(id)sender
 {
 	id<MKAnnotation> anno = [self.map.annotations objectAtIndex:((UIButton*) sender).tag];
 	NSLog(@"Delete Annotation Button Clicked: %@", [anno title]);
@@ -297,22 +313,9 @@
 	[self mapDataToMapAnnotations];
 }
 
-
-
-//- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
-//    MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
-//    
-//    if( ((MapAnnotation*)annotation).source isEqualToString:@"WIKIPEDIA"){
-//      annView.pinColor = MKPinAnnotationColorGreen;  
-//    }else if(((MapAnnotation*)annotation).source isEqualToString:@"BUZZ"){
-//        annView.pinColor = MKPinAnnotationColorRed;
-//    }
-//    annView.animatesDrop=TRUE;
-//    annView.canShowCallout = YES;
-//    annView.calloutOffset = CGPointMake(-5, 5);
-//    return annView;
-//}
-
-
+- (void) dealloc {
+	[super dealloc];
+	[overlay release];
+}
 
 @end

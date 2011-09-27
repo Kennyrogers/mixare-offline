@@ -101,8 +101,11 @@
 //        UIImage *image =[UIImage imageNamed:path];
         
         //reading directly from the resources
-        NSString *path = [[NSString alloc] initWithFormat:@"/singapore_HD/%@", tile.imagePath];
-        NSString *fileLocation = [[NSBundle mainBundle] pathForResource:path ofType:@"jpg"];
+		NSString *tileFolder = [[NSUserDefaults standardUserDefaults] stringForKey:@"mapTilesToDisplay"];
+		
+		
+        NSString *path = [[NSString alloc] initWithFormat:@"/%@/%@", tileFolder, tile.imagePath];
+        NSString *fileLocation = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
         NSData *imageData = [NSData dataWithContentsOfFile:fileLocation];
         UIImage *image = [UIImage imageWithData:imageData];
         

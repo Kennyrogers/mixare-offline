@@ -54,7 +54,8 @@
 @property (nonatomic, retain) TileOverlay *overlay;
 
 -(void) mapDataToMapAnnotations;
-- (void) AnnotationInfoButtonClick:(id)sender;
-- (void) AnnotationDeleteButtonClick:(id)sender;
+- (IBAction) ToggleMapTiles:(id)sender;
+- (IBAction) AnnotationInfoButtonClick:(id)sender;
+- (IBAction) AnnotationDeleteButtonClick:(id)sender;
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)ovl;
 @end
