@@ -71,6 +71,8 @@
 		65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A1E67C14285A180077F775 /* AddPOIController.xib */; };
 		65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 65ABA05B142C9D3E00E45B66 /* button_general_delete.png */; };
 		65E5A46C142B1F37009B7E1B /* MixareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E5A46B142B1F37009B7E1B /* MixareUtils.m */; };
+		65FBEE2C1431922B00B6DB79 /* TILES_SAT in Resources */ = {isa = PBXBuildFile; fileRef = 65FBEE251431922B00B6DB79 /* TILES_SAT */; };
+		65FBEE341431923800B6DB79 /* TILES_TOPO in Resources */ = {isa = PBXBuildFile; fileRef = 65FBEE2D1431923800B6DB79 /* TILES_TOPO */; };
 		6E5CD145143048D900453381 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD144143048D900453381 /* ImageIO.framework */; };
 		6E5CD148143048E000453381 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD147143048E000453381 /* MobileCoreServices.framework */; };
 		6E5CD14A143048EF00453381 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5CD149143048EF00453381 /* AssetsLibrary.framework */; };
@@ -179,6 +181,8 @@
 		65ABA05B142C9D3E00E45B66 /* button_general_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_general_delete.png; sourceTree = "<group>"; };
 		65E5A46A142B1F37009B7E1B /* MixareUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixareUtils.h; sourceTree = "<group>"; };
 		65E5A46B142B1F37009B7E1B /* MixareUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixareUtils.m; sourceTree = "<group>"; };
+		65FBEE251431922B00B6DB79 /* TILES_SAT */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TILES_SAT; sourceTree = "<group>"; };
+		65FBEE2D1431923800B6DB79 /* TILES_TOPO */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TILES_TOPO; sourceTree = "<group>"; };
 		6E5CD144143048D900453381 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6E5CD147143048E000453381 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6E5CD149143048EF00453381 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -272,6 +276,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65FBEE2D1431923800B6DB79 /* TILES_TOPO */,
+				65FBEE251431922B00B6DB79 /* TILES_SAT */,
 				6E774C5E142463CC00CC6F4B /* myhouse.json */,
 				6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */,
 				365F945D12AE737800286824 /* Localizable.strings */,
@@ -540,6 +546,8 @@
 				6E774C61142463CC00CC6F4B /* dsta_tower_A.json in Resources */,
 				65A1E67D14285A180077F775 /* AddPOIController.xib in Resources */,
 				65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */,
+				65FBEE2C1431922B00B6DB79 /* TILES_SAT in Resources */,
+				65FBEE341431923800B6DB79 /* TILES_TOPO in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
