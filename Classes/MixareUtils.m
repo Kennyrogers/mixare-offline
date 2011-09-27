@@ -79,6 +79,22 @@ static CLLocationCoordinate2D userProvidedLocation;
     
 }
 
++ (void)deleteImage:(NSString*)imageName {
+    
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];//create instance of NSFileManager
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //create an array and store result of our search for the documents directory in it
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
+    
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]]; //add our image to the path
+    
+    [fileManager removeItemAtPath:fullPath error:NULL]; //finally save the path (image)
+    
+    NSLog(@"image deleted");
+}
+
 +(NSMutableDictionary *)updateMetadata:(NSMutableDictionary *)metadataAsMutable:(NSString *)userComment{
     if(!metadataAsMutable)
         metadataAsMutable = [NSMutableDictionary dictionary];
