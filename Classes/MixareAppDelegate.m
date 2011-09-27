@@ -241,9 +241,9 @@
 		PhysicalPlace *tempCoordinate;
 		for(NSDictionary *poi in _data){
 			CGFloat alt = [[poi valueForKey:@"alt"]floatValue];
-			if(alt ==0.0){
-				alt = _locManager.location.altitude+50;
-			}
+			//if(alt ==0.0){
+				alt = _locManager.location.altitude;
+			//}
 			float lat = [[poi valueForKey:@"lat"]floatValue];
 			float lon = [[poi valueForKey:@"lon"]floatValue];
 			
