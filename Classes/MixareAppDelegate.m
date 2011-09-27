@@ -25,7 +25,7 @@
 #import "DataSource.h"
 #import "MixareUtils.h"
 #define degreesToRadian(x) (M_PI * (x) / 180.0)
- 
+
 
 @implementation MixareAppDelegate
 @synthesize mapViewController = _mapViewController;
@@ -36,6 +36,9 @@
 @synthesize listViewController = _listViewController;
 @synthesize slider = _slider;
 @synthesize menuButton = _menuButton;
+@synthesize rangeButton = _rangeButton;
+@synthesize rangeTextField = _rangeTextField;
+@synthesize rangeDoneButton = _rangeDoneButton;
 @synthesize moreViewController = _moreViewController;
 @synthesize sourceViewController = _sourceViewController;
 @synthesize valueLabel = _valueLabel;
@@ -55,11 +58,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-
+    
 	[self initLocationManager];
-   
+    
 	[[NSUserDefaults standardUserDefaults] setObject:@"TRUE" forKey:@"Wikipedia"];
-   
+    
 	[self downloadData];
 	[self iniARView];
     beforeWasLandscape = NO;
@@ -71,7 +74,7 @@
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:1]).title = NSLocalizedString(@"Sources", @"2 tabbar icon");
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:2]).title = NSLocalizedString(@"List View", @"3 tabbar icon");
     ((UITabBarItem *)[_tabBarController.tabBar.items objectAtIndex:3]).title = NSLocalizedString(@"Map", @"4 tabbar icon");
-
+    
     NSString* licenseText = [[NSUserDefaults standardUserDefaults] objectForKey:@"mixaresFirstLounch"];
     if([licenseText isEqualToString:@""] || licenseText ==nil ) {
         UIAlertView *addAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"License",nil)message:@"Copyright (C) 2010- Peer internet solutions\n This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. \n This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \nYou should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/" delegate:self cancelButtonTitle:NSLocalizedString(@"OK",nil) otherButtonTitles:nil, nil];
@@ -82,7 +85,7 @@
 		//If first time launching, default to using Satellite imagery
         [[NSUserDefaults standardUserDefaults] setObject:@"TILES_SAT" forKey:@"mapTilesToDisplay"];
     }
-   
+    
     return YES;
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
@@ -118,6 +121,8 @@
     viewObject.bounds = CGRectMake(0, 0, 480, 320);
     _slider.frame = CGRectMake(62, 5, 288, 23);
     _menuButton.frame = CGRectMake(350, 0, 130, 30);
+    _rangeButton.frame =  CGRectMake(220,38,260,30);
+    _rangeTextField.frame = CGRectMake(390, 72, 90, 30);
     maxRadiusLabel.frame = CGRectMake(318, 28, 30, 10);
 }
 
@@ -128,6 +133,8 @@
     CGRectMake(0, 0, 320, 480);
     [viewObject setCenter:CGPointMake(240, 160)];
     _menuButton.frame =  CGRectMake(190, 0, 130, 30);
+    _rangeButton.frame =  CGRectMake(60,38,260,30);
+    _rangeTextField.frame = CGRectMake(230, 72, 90, 30);
     _slider.frame = CGRectMake(62, 5, 128, 23);
     maxRadiusLabel.frame= CGRectMake(158, 25, 30, 12);
 }
@@ -139,7 +146,7 @@
 
 -(void) iniARView{
     //if(augViewController == nil){
-        augViewController = [[AugmentedGeoViewController alloc] init];
+    augViewController = [[AugmentedGeoViewController alloc] init];
     //}
 	augViewController.debugMode = NO;
 	
@@ -158,6 +165,9 @@
     [self initControls];
     [notificationView removeFromSuperview];
     [augViewController.view addSubview:_menuButton];
+    [augViewController.view addSubview:_rangeButton];
+    [augViewController.view addSubview:_rangeTextField];
+    [augViewController.view addSubview:_rangeDoneButton];
     [augViewController.view addSubview:_slider];
     [augViewController.view addSubview:_valueLabel];
     [augViewController.view addSubview:nordLabel];
@@ -167,18 +177,55 @@
     window.rootViewController = augViewController;
 }
 
+#pragma mark - INITIALIZATION
+
 -(void) initControls{
     _menuButton = [[UISegmentedControl alloc]initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"Menu",nil), NSLocalizedString(@"Radius",nil),nil]];
     _menuButton.segmentedControlStyle = UISegmentedControlStyleBar;
     CGRect buttonFrame;
     CGRect sliderFrame;
     CGRect valueFrame;
+    CGRect rangeButtonFrame;
+    CGRect rangeTextFieldFrame;
+    CGRect rangeDoneButtonFrame;
     buttonFrame = CGRectMake(190, 0, 130, 30);
     sliderFrame = CGRectMake(62, 5, 128, 23);
     valueFrame = CGRectMake(8.5, 64, 45, 12);
+    rangeButtonFrame = CGRectMake(60,38,260,30);
+    rangeTextFieldFrame = CGRectMake(230, 72, 90, 30);
+    rangeDoneButtonFrame = CGRectMake(0, 0, 25, 25); 
     _menuButton.frame = buttonFrame;
     _menuButton.alpha = 0.65;
     [_menuButton addTarget:self action:@selector(buttonClick:)forControlEvents:UIControlEventValueChanged];
+    
+    
+    _rangeButton = [[UISegmentedControl alloc]initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"5 km",nil), NSLocalizedString(@"10 km",nil),NSLocalizedString(@"15 km",nil),NSLocalizedString(@"...",nil),nil]];
+    _rangeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+    _rangeButton.frame = rangeButtonFrame;
+    _rangeButton.alpha = 0.65;
+    [_rangeButton addTarget:self action:@selector(rangeButtonClick:)forControlEvents:UIControlEventValueChanged];
+    _rangeButton.hidden = YES;
+    
+    
+    _rangeDoneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _rangeDoneButton = [[UIButton alloc]initWithFrame:rangeDoneButtonFrame];
+    [_rangeDoneButton setImage:[UIImage imageNamed:@"tick.png"] forState:UIControlStateNormal];
+    [_rangeDoneButton setImage:[UIImage imageNamed:@"tick.png"] forState:UIControlStateHighlighted]; 
+    _rangeDoneButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -10);
+    [_rangeDoneButton addTarget:self action:@selector(rangeDonePressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    _rangeTextField =[[UITextField alloc]initWithFrame:rangeTextFieldFrame];
+    _rangeTextField.placeholder = @"<km>";
+    _rangeTextField.textAlignment = UITextAlignmentLeft;
+    _rangeTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    _rangeTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _rangeTextField.font = [UIFont systemFontOfSize:10.0];
+    _rangeTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    _rangeTextField.rightView = _rangeDoneButton;
+    _rangeTextField.rightViewMode = UITextFieldViewModeAlways;
+    _rangeTextField.hidden = YES;
+    
     
     _slider = [[UISlider alloc]initWithFrame:sliderFrame];
     _slider.alpha = 0.7;  
@@ -220,7 +267,7 @@
         _valueLabel.text= [NSString stringWithFormat:@"%.2f km",radius];
     }
     
-        
+    
     
 }
 
@@ -233,7 +280,7 @@
 		//[_locManager startUpdatingLocation];
 	}
 }
-
+#pragma mark - EVENT HANDLERS
 -(void)mapData{
 	if(_data != nil){
 		NSMutableArray *tempLocationArray = [[NSMutableArray alloc] initWithCapacity:[_data count]];
@@ -242,7 +289,7 @@
 		for(NSDictionary *poi in _data){
 			CGFloat alt = [[poi valueForKey:@"alt"]floatValue];
 			//if(alt ==0.0){
-				alt = _locManager.location.altitude;
+				alt = _locManager.location.altitude+50;
 			//}
 			float lat = [[poi valueForKey:@"lat"]floatValue];
 			float lon = [[poi valueForKey:@"lon"]floatValue];
@@ -276,6 +323,12 @@
 
 -(void) downloadData
 {
+    float radius = 3.5; //default range, can be changed
+    if(_slider != nil){
+        radius = _slider.value;
+        NSLog(@"range is %.2f",_slider.value);
+    }
+    
 	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
 	
@@ -283,134 +336,164 @@
 	_data = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
 	
 	if(_data == nil)
-	{
 		_data = [[NSMutableArray alloc] init];
-	}
+    else //removing POIs with range < upper limit
+    {
+        CLLocationManager *locmng = [[CLLocationManager alloc]init];
+        const CLLocation *currentLoc = locmng.location;
+        [locmng release];
+        
+        NSMutableArray *entriesToBeRemoved = [[NSMutableArray alloc]init];
+        
+        for (int x=0; x < [_data count]; x++) {
+			NSDictionary *poiEntry = [_data objectAtIndex:x];
+            CLLocation *poiLoc = [[CLLocation alloc]initWithLatitude:[[poiEntry valueForKey:@"lat"] floatValue] longitude:[[poiEntry valueForKey:@"lon"] floatValue]];
+            
+			if ([poiLoc distanceFromLocation:currentLoc]/1000 > radius){   //check distance
+				[entriesToBeRemoved addObject:poiEntry];
+                //                [_data removeObjectAtIndex:x];
+                //				break;
+			}
+		}
+        [_data removeObjectsInArray:entriesToBeRemoved];
+    }
+    
 }
 
 /*
--(void)downloadData{
-	//NSAutoreleasePool * pool = [[NSAutoreleasePool alloc]init];
-	jHandler = [[JsonHandler alloc]init];
-	CLLocation * pos = _locManager.location;
-	NSString * wikiData;
-    NSString * mixareData;
-    NSString * twitterData;
-	NSString * buzzData;
-    NSString * localWikiData;
-    float radius = 3.5;
-    if(_slider != nil){
-        radius = _slider.value;
-    }
-    
-    if([self checkIfDataSourceIsEanabled:@"Wikipedia"]){
-        NSLog(@"Downloading WIki data");
-        NSString   *language = [[NSLocale preferredLanguages] objectAtIndex:0];
-        NSLog(@"Language: %@",language);
-        
-        wikiData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"WIKIPEDIA" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:pos.altitude radius:radius Lang:language]] encoding:NSUTF8StringEncoding error:nil];
-        NSLog(@"Download done");
-    }else {
-        wikiData = nil;
-    }
-    if([self checkIfDataSourceIsEanabled:@"Buzz"]){
-        NSLog(@"Downloading Buzz data");
-        buzzData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"BUZZ" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:700 radius:radius Lang:@"de"]]encoding:NSUTF8StringEncoding error:nil];
-        NSLog(@"Download done");
-    }else {
-        buzzData = nil;
-    }
-    if([self checkIfDataSourceIsEanabled:@"Twitter"]){
-        NSLog(@"Downloading Twitter data");
-        twitterData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"TWITTER" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:700 radius:radius Lang:@"de"]]encoding:NSUTF8StringEncoding error:nil];
-        NSLog(@"Download done");
-    }else {
-        twitterData = nil;
-    }
-    //User specific Sources .. 
-    if(_sourceViewController != nil && [_sourceViewController.dataSourceArray count]>3){
-        //datasource contains sources added by the user
-        NSLog(@"Downloading Mixare data");
-        //mixareData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:@"http://www.suedtirolerland.it/api/map/getARData/?client%5Blat%5D=46.47895932197436&client%5Blng%5D=11.295661926269203&client%5Brad%5D=100&lang_id=1&project_id=15&showTypes=13%2C14&key=51016f95291ef145e4b260c51b06af61"] encoding:NSUTF8StringEncoding error:nil];
-        //getting selected Source
-        NSString * customURL;
-        for(int i=3;i< [_sourceViewController.dataSourceArray count];i++){
-            if([self checkIfDataSourceIsEanabled:[_sourceViewController.dataSourceArray objectAtIndex:i]]){
-                customURL = [NSString stringWithFormat:@"http://%@",[_sourceViewController.dataSourceArray objectAtIndex:i]];
-            }
-        }
-        NSURL * customDsURL;
-        @try {
-            customDsURL = [NSURL URLWithString:customURL];
-            mixareData = [[NSString alloc]initWithContentsOfURL:customDsURL];
-            NSLog(@"Download done");
-        }
-        @catch (NSException *exception) {
-            NSLog(@"ERROR Downloading custom ds");
-        }
-        @finally {
-            
-        }
-        
-        
-    }else {
-        mixareData = nil;
-    }
+ -(void)downloadData{
+ //NSAutoreleasePool * pool = [[NSAutoreleasePool alloc]init];
+ jHandler = [[JsonHandler alloc]init];
+ CLLocation * pos = _locManager.location;
+ NSString * wikiData;
+ NSString * mixareData;
+ NSString * twitterData;
+ NSString * buzzData;
+ NSString * localWikiData;
+ float radius = 3.5;
+ if(_slider != nil){
+ radius = _slider.value;
+ }
  
-    //force to grab local data 
-    NSLog(@"Downloading DSTA TOWER A data");
-    NSString *fileLocation = [[NSBundle mainBundle] pathForResource:@"dsta_tower_A" ofType:@"json"];
-    localWikiData = [[NSString alloc]initWithContentsOfURL:[NSURL fileURLWithPath:fileLocation] encoding:NSUTF8StringEncoding error:nil];
-    
-    
+ if([self checkIfDataSourceIsEanabled:@"Wikipedia"]){
+ NSLog(@"Downloading WIki data");
+ NSString   *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+ NSLog(@"Language: %@",language);
  
-    [_data removeAllObjects];
-    if(wikiData != nil){
-        _data= [jHandler processWikipediaJSONData:wikiData];
-        NSLog(@"data count: %d", [_data count]);
-        [wikiData release];
-    }
-    if(buzzData != nil){
-        [_data addObjectsFromArray:[jHandler processBuzzJSONData:buzzData]];
-        NSLog(@"data count: %d", [_data count]);
-        [buzzData release];
-    }
-    if(twitterData != nil && ![twitterData isEqualToString:@""]){
-       [_data addObjectsFromArray:[jHandler processTwitterJSONData:twitterData]]; 
-        NSLog(@"data count: %d", [_data count]);
-        [twitterData release];
-    }
-    if(mixareData != nil && ![mixareData isEqualToString:@""]){
-        [_data addObjectsFromArray:[jHandler processMixareJSONData:mixareData]];
-        NSLog(@"data count: %d", [_data count]);
-        [mixareData release];
-    }
-    if(localWikiData != nil){
-        _data= [jHandler processWikipediaJSONData:localWikiData];
-        NSLog(@"data count: %d", [_data count]);
-        [localWikiData release];
-    }
-	
-    
-    
-    
-	[jHandler release];
-	//[pool release];
-}
-*/
+ wikiData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"WIKIPEDIA" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:pos.altitude radius:radius Lang:language]] encoding:NSUTF8StringEncoding error:nil];
+ NSLog(@"Download done");
+ }else {
+ wikiData = nil;
+ }
+ if([self checkIfDataSourceIsEanabled:@"Buzz"]){
+ NSLog(@"Downloading Buzz data");
+ buzzData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"BUZZ" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:700 radius:radius Lang:@"de"]]encoding:NSUTF8StringEncoding error:nil];
+ NSLog(@"Download done");
+ }else {
+ buzzData = nil;
+ }
+ if([self checkIfDataSourceIsEanabled:@"Twitter"]){
+ NSLog(@"Downloading Twitter data");
+ twitterData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:[DataSource createRequestURLFromDataSource:@"TWITTER" Lat:pos.coordinate.latitude Lon:pos.coordinate.longitude Alt:700 radius:radius Lang:@"de"]]encoding:NSUTF8StringEncoding error:nil];
+ NSLog(@"Download done");
+ }else {
+ twitterData = nil;
+ }
+ //User specific Sources .. 
+ if(_sourceViewController != nil && [_sourceViewController.dataSourceArray count]>3){
+ //datasource contains sources added by the user
+ NSLog(@"Downloading Mixare data");
+ //mixareData = [[NSString alloc]initWithContentsOfURL:[NSURL URLWithString:@"http://www.suedtirolerland.it/api/map/getARData/?client%5Blat%5D=46.47895932197436&client%5Blng%5D=11.295661926269203&client%5Brad%5D=100&lang_id=1&project_id=15&showTypes=13%2C14&key=51016f95291ef145e4b260c51b06af61"] encoding:NSUTF8StringEncoding error:nil];
+ //getting selected Source
+ NSString * customURL;
+ for(int i=3;i< [_sourceViewController.dataSourceArray count];i++){
+ if([self checkIfDataSourceIsEanabled:[_sourceViewController.dataSourceArray objectAtIndex:i]]){
+ customURL = [NSString stringWithFormat:@"http://%@",[_sourceViewController.dataSourceArray objectAtIndex:i]];
+ }
+ }
+ NSURL * customDsURL;
+ @try {
+ customDsURL = [NSURL URLWithString:customURL];
+ mixareData = [[NSString alloc]initWithContentsOfURL:customDsURL];
+ NSLog(@"Download done");
+ }
+ @catch (NSException *exception) {
+ NSLog(@"ERROR Downloading custom ds");
+ }
+ @finally {
+ 
+ }
  
  
+ }else {
+ mixareData = nil;
+ }
+ 
+ //force to grab local data 
+ NSLog(@"Downloading DSTA TOWER A data");
+ NSString *fileLocation = [[NSBundle mainBundle] pathForResource:@"dsta_tower_A" ofType:@"json"];
+ localWikiData = [[NSString alloc]initWithContentsOfURL:[NSURL fileURLWithPath:fileLocation] encoding:NSUTF8StringEncoding error:nil];
+ 
+ 
+ 
+ [_data removeAllObjects];
+ if(wikiData != nil){
+ _data= [jHandler processWikipediaJSONData:wikiData];
+ NSLog(@"data count: %d", [_data count]);
+ [wikiData release];
+ }
+ if(buzzData != nil){
+ [_data addObjectsFromArray:[jHandler processBuzzJSONData:buzzData]];
+ NSLog(@"data count: %d", [_data count]);
+ [buzzData release];
+ }
+ if(twitterData != nil && ![twitterData isEqualToString:@""]){
+ [_data addObjectsFromArray:[jHandler processTwitterJSONData:twitterData]]; 
+ NSLog(@"data count: %d", [_data count]);
+ [twitterData release];
+ }
+ if(mixareData != nil && ![mixareData isEqualToString:@""]){
+ [_data addObjectsFromArray:[jHandler processMixareJSONData:mixareData]];
+ NSLog(@"data count: %d", [_data count]);
+ [mixareData release];
+ }
+ if(localWikiData != nil){
+ _data= [jHandler processWikipediaJSONData:localWikiData];
+ NSLog(@"data count: %d", [_data count]);
+ [localWikiData release];
+ }
+ 
+ 
+ 
+ 
+ [jHandler release];
+ //[pool release];
+ }
+ */
+
+
 -(void)valueChanged:(id)sender{
-	NSLog(@"val: %f",_slider.value);
+    NSLog(@"val: %f",_slider.value);
     _valueLabel.text = [NSString stringWithFormat:@"%f", _slider.value];
     [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%f", _slider.value]  forKey:@"radius"];
-	[augViewController removeCoordinates:_data];
-	[self downloadData];
+    [augViewController removeCoordinates:_data];
+    [self downloadData];
     [self iniARView];
     [augViewController startListening];
     
-	NSLog(@"POIS CHANGED");
-	
+    NSLog(@"POIS CHANGED");
+}
+
+-(void)rangeDonePressed:(UIButton *)doneButton
+{
+    if([_rangeTextField.text floatValue] > 80)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Maximum range is 80 km" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];        
+        [alert show];
+        [alert release];
+    }
+    _slider.value = [_rangeTextField.text floatValue];
+    [self setRangeValue];
 }
 
 -(void)buttonClick:(id)sender{
@@ -430,15 +513,47 @@
         window.rootViewController = _tabBarController;
         [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-
+        
 	}else if(_menuButton.selectedSegmentIndex ==  1){
 		_slider.hidden = NO;
         _valueLabel.hidden = NO;
         maxRadiusLabel.hidden=NO;
+        _rangeButton.hidden = NO;
 	}
 }
 
 
+-(void)rangeButtonClick:(id)sender{
+    switch(_rangeButton.selectedSegmentIndex)
+    {
+        case 0:
+            _slider.value = 5.0;
+            break;
+        case 1:
+            _slider.value = 10.0;
+            break;
+        case 2:
+            _slider.value = 15.0;
+            break;
+        case 3:
+            _rangeTextField.hidden = NO;
+            return;
+    }
+    [self setRangeValue];
+    
+}
+
+- (void)setRangeValue
+{
+    _valueLabel.text = [NSString stringWithFormat:@"%f", _slider.value];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%f", _slider.value]  forKey:@"radius"];
+	[augViewController removeCoordinates:_data];
+	[self downloadData];
+    [self iniARView];
+    [augViewController startListening];
+    
+	NSLog(@"POIS CHANGED");
+}
 
 #define BOX_WIDTH 150
 #define BOX_HEIGHT 100
@@ -454,7 +569,7 @@
 	}else if([coordinate.source isEqualToString:@"TWITTER"]){
         pointView.image = [UIImage imageNamed:@"twitter_logo.png"];
 	}else if([coordinate.source isEqualToString:@"BUZZ"]){
-       pointView.image = [UIImage imageNamed:@"buzz_logo.png"];
+        pointView.image = [UIImage imageNamed:@"buzz_logo.png"];
 	}
 	else{
 		pointView.image = [UIImage imageNamed:@"list.png"];
@@ -467,7 +582,7 @@
 	titleLabel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.8];
 	titleLabel.textColor = [UIColor whiteColor];
 	titleLabel.textAlignment = UITextAlignmentCenter;
-
+    
 	titleLabel.text = coordinate.title;
     if([coordinate.source isEqualToString:@"BUZZ"]){
         //wrapping long buzz messages
@@ -587,10 +702,10 @@
 }
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
+ }
+ */
 
 
 #pragma mark -
