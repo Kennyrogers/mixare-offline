@@ -33,14 +33,13 @@
 @property (nonatomic) CGFloat altitude; 
 @property (nonatomic,retain) NSString * title;
 @property (nonatomic,retain) NSString * subTitle;
-@property (nonatomic,retain) NSString *source;
-
-
+@property (nonatomic,retain) NSString * source;
 
 @end
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate> {
 	IBOutlet MKMapView* _map;
+	IBOutlet UIBarButtonItem *_mapTileToggleButton;
 	MKCoordinateRegion _focusArea;
 	NSMutableArray *_data;
 	
@@ -48,7 +47,8 @@
 }
 
 @property (nonatomic) CLLocationCoordinate2D longPressedCoords;
-@property(nonatomic,retain)MKMapView *map;
+@property (nonatomic,retain) MKMapView *map;
+@property (nonatomic,retain) UIBarButtonItem *mapTileToggleButton;
 @property (nonatomic) MKCoordinateRegion focusArea;
 @property (nonatomic, retain) NSMutableArray * data;
 @property (nonatomic, retain) TileOverlay *overlay;

@@ -46,6 +46,7 @@
 
 @implementation MapViewController
 @synthesize map  = _map;
+@synthesize mapTileToggleButton = _mapTileToggleButton;
 @synthesize focusArea = _focusArea;
 @synthesize data = _data;
 @synthesize overlay;
@@ -155,8 +156,6 @@
 	return YES;
 }
 
-
-
 -(void) mapDataToMapAnnotations
 {
 	if(_data != nil)
@@ -205,9 +204,11 @@
 	
 	if (tilePreference == @"TILES_SAT") {
 		[prefs setObject:@"TILES_TOPO" forKey:@"mapTilesToDisplay"];
+		[_mapTileToggleButton setTitle:@"Topo Map"];
 	}
 	else {
 		[prefs setObject:@"TILES_SAT" forKey:@"mapTilesToDisplay"];
+		[_mapTileToggleButton setTitle:@"Sat Map"];
 	}
 	
 	[self.map removeOverlay:overlay];
@@ -316,6 +317,9 @@
 - (void) dealloc {
 	[super dealloc];
 	[overlay release];
+	[_map release];
+	[_mapTileToggleButton release];
+	[_data release];
 }
 
 @end
