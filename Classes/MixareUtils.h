@@ -22,5 +22,7 @@
 +(NSMutableDictionary *)updateMetadata:(NSMutableDictionary *)metadataAsMutable:(NSString *)userComment;
 +(NSMutableDictionary *)updateEXIFDicationary:(NSMutableDictionary *)exifDict:(NSString *)userComment;
 +(NSMutableDictionary *)updateGPSDictionary:(NSMutableDictionary *)gpsDict;
++(CLLocation *)getUserCLLocation;
++(double)calculateDistanceFromUser:(CLLocation *)itemLoc;
 
 @end
