@@ -21,7 +21,7 @@
 
 @synthesize radialDistance, inclination, azimuth;
 
-@synthesize title  , subtitle , source= _source , url = _url, radarPos = _radarPos;
+@synthesize title  , subtitle , source= _source , url = _url, radarPos = _radarPos, location=_location;
 
 + (PoiItem *)coordinateWithRadialDistance:(double)newRadialDistance inclination:(double)newInclination azimuth:(double)newAzimuth {
 	PoiItem *newCoordinate = [[PoiItem alloc] init];

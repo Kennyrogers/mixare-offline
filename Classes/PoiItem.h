@@ -60,6 +60,7 @@
 	NSString *title;
 	NSString *subtitle;
     CGPoint _radarPos;
+    CLLocation *_location;
 }
 
 - (NSUInteger)hash;
@@ -76,5 +77,6 @@
 @property (nonatomic) double azimuth;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic) CGPoint radarPos;
+@property (nonatomic, retain) CLLocation *location;
 
 @end

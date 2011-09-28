@@ -299,9 +299,12 @@
 			tempCoordinate.title = [poi valueForKey:@"title"];
 			tempCoordinate.source = [poi valueForKey:@"source"];
             tempCoordinate.url = [poi valueForKey:@"url"];
+            
+            tempCoordinate.location = [[CLLocation alloc]initWithLatitude:lat longitude:lon];
 			[tempLocationArray addObject:tempCoordinate];
 			[tempLocation release];
 		}
+
 		[augViewController addCoordinates:tempLocationArray];
 		[tempLocationArray release];
 	}else NSLog(@"no data received");
@@ -339,17 +342,13 @@
 		_data = [[NSMutableArray alloc] init];
     else //removing POIs with range < upper limit
     {
-        CLLocationManager *locmng = [[CLLocationManager alloc]init];
-        const CLLocation *currentLoc = locmng.location;
-        [locmng release];
-        
         NSMutableArray *entriesToBeRemoved = [[NSMutableArray alloc]init];
         
         for (int x=0; x < [_data count]; x++) {
 			NSDictionary *poiEntry = [_data objectAtIndex:x];
             CLLocation *poiLoc = [[CLLocation alloc]initWithLatitude:[[poiEntry valueForKey:@"lat"] floatValue] longitude:[[poiEntry valueForKey:@"lon"] floatValue]];
             
-			if ([poiLoc distanceFromLocation:currentLoc]/1000 > radius){   //check distance
+			if ([MixareUtils calculateDistanceFromUser:poiLoc]/1000 > radius){   //check distance
 				[entriesToBeRemoved addObject:poiEntry];
                 //                [_data removeObjectAtIndex:x];
                 //				break;
@@ -598,14 +597,26 @@
 	}
 	titleLabel.frame = CGRectMake(BOX_WIDTH / 2.0 - titleLabel.frame.size.width / 2.0 - 4.0,  pointView.image.size.height + 5, titleLabel.frame.size.width + 8.0, titleLabel.frame.size.height + 8.0);
 	
-	
+    UILabel *distLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, BOX_HEIGHT / 2.0 , BOX_WIDTH, 20.0)];
+	distLabel.backgroundColor = [UIColor colorWithWhite:.3 alpha:.8];
+	distLabel.textColor = [UIColor whiteColor];
+	distLabel.textAlignment = UITextAlignmentCenter;
+    
+    
+    //calculate dist
+    double distance = [MixareUtils calculateDistanceFromUser:coordinate.location]/1000;
+    
+    distLabel.text = [NSString stringWithFormat:@"%.2f km", distance];
+    [distLabel sizeToFit];
+    	distLabel.frame = CGRectMake(BOX_WIDTH / 2.0 - titleLabel.frame.size.width / 2.0 - 4.0,  pointView.image.size.height + titleLabel.frame.size.height + 13, distLabel.frame.size.width + 8.0, distLabel.frame.size.height + 8.0);
+    
     tempView.url = coordinate.url;
 	[tempView addSubview:titleLabel];
 	[tempView addSubview:pointView];
+    [tempView addSubview:distLabel];
 	[pointView release];
 	[titleLabel release];
     tempView.userInteractionEnabled = YES;
-    
 	return [tempView autorelease];
 }
 
