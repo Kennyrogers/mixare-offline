@@ -90,7 +90,7 @@ static CLLocationCoordinate2D userProvidedLocation;
     
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]]; //add our image to the path
     
-    [fileManager removeItemAtPath:fullPath error:NULL]; //finally save the path (image)
+    [fileManager removeItemAtPath:fullPath error:NULL]; //finally delete the path (image)
     
     NSLog(@"image deleted");
 }
@@ -126,7 +126,7 @@ static CLLocationCoordinate2D userProvidedLocation;
     
     //current location
     CLLocationManager *locmng = [[CLLocationManager alloc]init];
-    CLLocation *location = locmng.location;
+    CLLocation *location = [self getUserCLLocation];
     [locmng release];
     
     if (location) {
@@ -159,5 +159,20 @@ static CLLocationCoordinate2D userProvidedLocation;
         [gpsDict setObject:[NSNumber numberWithFloat:location.altitude] forKey:(NSString*)kCGImagePropertyGPSAltitude];
     }
     return [gpsDict autorelease]; 
+}
+
++ (CLLocation *)getUserCLLocation
+{
+    CLLocationManager *locmng = [[CLLocationManager alloc]init];
+    CLLocation *location = locmng.location;
+    [locmng release];
+    return location;
+}
+
++ (double)calculateDistanceFromUser:(CLLocation *)itemLoc{
+    double distance = -1;
+    if(itemLoc)
+        distance = [itemLoc distanceFromLocation:[self getUserCLLocation]];
+    return distance;
 }
 @end
