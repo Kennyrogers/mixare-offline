@@ -41,13 +41,16 @@
 	JsonHandler * jHandler;
 	UISlider * _slider;
 	UISegmentedControl *_menuButton;
+    UISegmentedControl *_rangeButton;
+    UITextField * _rangeTextField;
+    UIButton * _rangeDoneButton;
 	IBOutlet UIView * menuView;
     UILabel * _valueLabel;
     UILabel * nordLabel;
     UILabel * maxRadiusLabel;
     MoreViewController * _moreViewController;
     SourceViewController * _sourceViewController;
-    @private
+@private
     BOOL beforeWasLandscape;
     IBOutlet UIView * notificationView;
 	
@@ -61,6 +64,9 @@
 @property (nonatomic, retain) IBOutlet MapViewController* mapViewController;
 @property (nonatomic, retain) IBOutlet UISlider * slider;
 @property (nonatomic, retain) IBOutlet UISegmentedControl * menuButton;
+@property (nonatomic, retain) IBOutlet UISegmentedControl * rangeButton;
+@property (nonatomic, retain) IBOutlet UITextField * rangeTextField;
+@property (nonatomic, retain) IBOutlet UIButton * rangeDoneButton;
 @property (nonatomic, retain) IBOutlet MoreViewController *moreViewController;
 @property (nonatomic, retain) IBOutlet SourceViewController * sourceViewController;
 @property (nonatomic, retain) IBOutlet UILabel * valueLabel;
@@ -75,4 +81,5 @@
 -(BOOL)checkIfDataSourceIsEanabled: (NSString *)source;
 -(void)setViewToLandscape:(UIView*)viewObject;
 -(void)setViewToPortrait:(UIView*)viewObject;
+-(void)setRangeValue;
 @end

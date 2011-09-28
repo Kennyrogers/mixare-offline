@@ -18,6 +18,7 @@
 + (BOOL) isCustomUserLocSet;
 + (void)saveImage:(UIImage*)img:(NSString*)imgName;
 + (UIImage*)loadImage:(NSString*)imageName;
++ (void)deleteImage:(NSString*)imageName;
 +(NSMutableDictionary *)updateMetadata:(NSMutableDictionary *)metadataAsMutable:(NSString *)userComment;
 +(NSMutableDictionary *)updateEXIFDicationary:(NSMutableDictionary *)exifDict:(NSString *)userComment;
 +(NSMutableDictionary *)updateGPSDictionary:(NSMutableDictionary *)gpsDict;

@@ -304,14 +304,17 @@
 				break;
 			}
 		}
+        [MixareUtils deleteImage:[anno title]];
 	}	
-
+    
 	
 	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 	NSString *plistPath = [rootPath stringByAppendingPathComponent:@"PoiArray.plist"];
 	[_data writeToFile:plistPath atomically:YES];
 	
+    
 	[self mapDataToMapAnnotations];
+
 }
 
 - (void) dealloc {

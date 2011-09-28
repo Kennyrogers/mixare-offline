@@ -83,6 +83,7 @@
 		6E774C5D142463A400CC6F4B /* TileOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E774C5B142463A400CC6F4B /* TileOverlayView.m */; };
 		6E774C60142463CC00CC6F4B /* myhouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E774C5E142463CC00CC6F4B /* myhouse.json */; };
 		6E774C61142463CC00CC6F4B /* dsta_tower_A.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */; };
+		6E8448621432620C00805FC2 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E8448611432620C00805FC2 /* tick.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +198,7 @@
 		6E774C5B142463A400CC6F4B /* TileOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileOverlayView.m; sourceTree = "<group>"; };
 		6E774C5E142463CC00CC6F4B /* myhouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = myhouse.json; sourceTree = "<group>"; };
 		6E774C5F142463CC00CC6F4B /* dsta_tower_A.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsta_tower_A.json; sourceTree = "<group>"; };
+		6E8448611432620C00805FC2 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Mixare-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Mixare-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,6 +415,7 @@
 		36A83E5F125B0A4300D0D53D /* img */ = {
 			isa = PBXGroup;
 			children = (
+				6E8448611432620C00805FC2 /* tick.png */,
 				6E774C4E1424622C00CC6F4B /* singapore_HD */,
 				3687864E12AD174E000FBAA1 /* twitter_logo_small.png */,
 				3687864F12AD174E000FBAA1 /* buzz_logo_small.png */,
@@ -548,6 +551,7 @@
 				65ABA05C142C9D3E00E45B66 /* button_general_delete.png in Resources */,
 				65FBEE2C1431922B00B6DB79 /* TILES_SAT in Resources */,
 				65FBEE341431923800B6DB79 /* TILES_TOPO in Resources */,
+				6E8448621432620C00805FC2 /* tick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
