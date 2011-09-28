@@ -263,7 +263,6 @@
         _valueLabel.text= @"5.0 km";
     }else{
         _slider.value = radius;
-        NSLog(@"RADIUS VALUE: %f", radius);
         _valueLabel.text= [NSString stringWithFormat:@"%.2f km",radius];
     }
     
@@ -329,7 +328,6 @@
     float radius = 3.5; //default range, can be changed
     if(_slider != nil){
         radius = _slider.value;
-        NSLog(@"range is %.2f",_slider.value);
     }
     
 	NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
