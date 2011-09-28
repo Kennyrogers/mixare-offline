@@ -32,7 +32,7 @@
 @property (nonatomic) CGFloat lon;
 @property (nonatomic) CGFloat altitude; 
 @property (nonatomic,retain) NSString * title;
-@property (nonatomic,retain) NSString * subTitle;
+@property (nonatomic,retain) NSString * subtitle;
 @property (nonatomic,retain) NSString * source;
 
 @end

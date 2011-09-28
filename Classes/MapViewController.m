@@ -25,7 +25,7 @@
 @implementation MapAnnotation
 @synthesize coordinate;
 @synthesize lat=_lat,lon=_lon,altitude= _altitude;
-@synthesize subTitle= _subTitle, title= _title, source=_source;
+@synthesize subtitle= _subTitle, title= _title, source=_source;
 
 
 - (CLLocationCoordinate2D)coordinate;{
@@ -177,7 +177,8 @@
 			tmpPlace.lat = [[poi valueForKey:@"lat"]floatValue];
 			tmpPlace.lon = [[poi valueForKey:@"lon"]floatValue];
             tmpPlace.source = [poi valueForKey:@"source"];
-            
+            tmpPlace.subtitle = [NSString stringWithFormat:@"%.1f km",[MixareUtils calculateDistanceFromUser:[[CLLocation alloc] initWithLatitude:tmpPlace.lat longitude:tmpPlace.lon]]/1000];
+            NSLog(@"%@",tmpPlace.subtitle);
             [self.map addAnnotation:tmpPlace];
 			[tmpPlace release];
 		}
@@ -229,7 +230,10 @@
 		return nil;
 	}
 
+    
 	MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
+    
+    NSLog(@"annotation subtitle is %@",[annotation subtitle]);
 	annView.canShowCallout = YES;    
 	annView.calloutOffset = CGPointMake(-5, 5);
 
