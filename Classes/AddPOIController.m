@@ -60,9 +60,7 @@
 	[textFieldLon setText:_initialLon];
     [image setImage:_initialImage];
     
-    self.imgPicker = [[UIImagePickerController alloc]init];
-    self.imgPicker.allowsEditing = NO;
-    self.imgPicker.delegate = self;
+
     
     
 }
@@ -172,6 +170,9 @@
 - (IBAction)grabImage:(UIButton *)sender{
     //    UIButton *senderButt = (UIButton *)sender;
     
+    self.imgPicker = [[UIImagePickerController alloc]init];
+    self.imgPicker.allowsEditing = NO;
+    self.imgPicker.delegate = self;
     
     if(sender.tag == 1)
         self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -202,7 +203,7 @@
          
         //getting the image metadata only if picker source is camera
         UIImagePickerControllerSourceType pickerType = picker.sourceType;
-        if(pickerType == UIImagePickerControllerSourceTypeCamera || pickerType == UIImagePickerControllerSourceTypePhotoLibrary)
+        if(pickerType == UIImagePickerControllerSourceTypeCamera)   //if its source is camera
         {
             NSDictionary *imageMetadata = [info objectForKey: UIImagePickerControllerMediaMetadata];
                         
@@ -212,8 +213,32 @@
             id key;
             while((key = [enumerator nextObject]))
             {
+                NSLog(@"%@",key);
                 [imgInfo setObject:[imageMetadata valueForKey:key] forKey:(NSString *)key];
             }
+        }
+        else if(pickerType == UIImagePickerControllerSourceTypePhotoLibrary)    //if source is photo library
+        {
+            NSURL *assetUrl = [info objectForKey:UIImagePickerControllerReferenceURL];
+            NSLog(@"%@",assetUrl);
+            ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+            
+            [library assetForURL:assetUrl resultBlock:^(ALAsset *asset)
+             {
+                 ALAssetRepresentation *representation = [asset defaultRepresentation];
+                 NSMutableDictionary *imageMetadata = (NSMutableDictionary*)[representation metadata];
+                 NSEnumerator *enumerator = [imageMetadata keyEnumerator];
+                 id key;
+                 while((key = [enumerator nextObject])) // can only be done inside the block.
+                 {
+                     NSLog(@"%@",key);
+                     [imgInfo setObject:[imageMetadata valueForKey:key] forKey:(NSString *)key];
+                 }
+             }failureBlock:^(NSError *error) {
+                 NSLog(@"%@",[error description]);
+             }];
+                              
+           
         }
     }
     image.image = originalImage;
