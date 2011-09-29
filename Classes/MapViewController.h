@@ -37,11 +37,12 @@
 
 @end
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate> {
+@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate, CLLocationManagerDelegate> {
 	IBOutlet MKMapView* _map;
 	IBOutlet UIBarButtonItem *_mapTileToggleButton;
-	MKCoordinateRegion _focusArea;
+	int _focusPOIIndex;
 	NSMutableArray *_data;
+	CLLocationManager *_locmng;
 	
 	CLLocationCoordinate2D _longPressedCoords;
 }
@@ -49,9 +50,10 @@
 @property (nonatomic) CLLocationCoordinate2D longPressedCoords;
 @property (nonatomic,retain) MKMapView *map;
 @property (nonatomic,retain) UIBarButtonItem *mapTileToggleButton;
-@property (nonatomic) MKCoordinateRegion focusArea;
+@property (nonatomic) int focusPOIIndex;
 @property (nonatomic, retain) NSMutableArray * data;
 @property (nonatomic, retain) TileOverlay *overlay;
+@property (nonatomic, retain) CLLocationManager *locmng;
 
 -(void) mapDataToMapAnnotations;
 - (IBAction) ToggleMapTiles:(id)sender;

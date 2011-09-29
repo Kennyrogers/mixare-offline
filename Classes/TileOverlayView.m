@@ -105,7 +105,7 @@
 		
 		
         NSString *path = [[NSString alloc] initWithFormat:@"/%@/%@", tileFolder, tile.imagePath];
-        NSString *fileLocation = [[NSBundle mainBundle] pathForResource:path ofType:@"png"];
+        NSString *fileLocation = [[NSBundle mainBundle] pathForResource:path ofType:@"jpg"];
         NSData *imageData = [NSData dataWithContentsOfFile:fileLocation];
         UIImage *image = [UIImage imageWithData:imageData];
         
