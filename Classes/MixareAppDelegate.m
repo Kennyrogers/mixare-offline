@@ -348,8 +348,6 @@
             
 			if ([MixareUtils calculateDistanceFromUser:poiLoc]/1000 > radius){   //check distance
 				[entriesToBeRemoved addObject:poiEntry];
-                //                [_data removeObjectAtIndex:x];
-                //				break;
 			}
 		}
         [_data removeObjectsInArray:entriesToBeRemoved];
@@ -471,14 +469,7 @@
 
 -(void)valueChanged:(id)sender{
     NSLog(@"val: %f",_slider.value);
-    _valueLabel.text = [NSString stringWithFormat:@"%f", _slider.value];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%f", _slider.value]  forKey:@"radius"];
-    [augViewController removeCoordinates:_data];
-    [self downloadData];
-    [self iniARView];
-    [augViewController startListening];
-    
-    NSLog(@"POIS CHANGED");
+    [self setRangeValue];
 }
 
 -(void)rangeDonePressed:(UIButton *)doneButton
