@@ -136,31 +136,39 @@
 	//[poiArray release];
     
     
-    
-    
-    
-    //saving image to photo library
-    //    UIImageWriteToSavedPhotosAlbum(image.image, self, nil, nil);
-    //getting the assets library
-    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-    ALAssetsLibraryWriteImageCompletionBlock imageWriteCompletionBlock = ^(NSURL *newURL, NSError *error){
+    if(!image.image)
+    {
         UIAlertView *alert;
-        
-        if(error)
-            alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Error saving image with metadata to Photo Library" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
-        else
-            alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Image with EXIF data saved to Photo Album" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
-        
+         alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"No image attached to POI" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
         [alert release];
-    };
+    }
+    else{
     
-       
-    [library writeImageToSavedPhotosAlbum:[image.image CGImage] metadata:[MixareUtils updateMetadata:imgInfo :[NSString stringWithFormat:@"Target: [latitude = %@ longitude = %@]", textFieldLat.text, textFieldLon.text]] completionBlock:imageWriteCompletionBlock];
     
-    //saving image to app's sandbox
-    
-    [MixareUtils saveImage:image.image :textFieldName.text];
+        //saving image to photo library
+        //    UIImageWriteToSavedPhotosAlbum(image.image, self, nil, nil);
+        //getting the assets library
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        ALAssetsLibraryWriteImageCompletionBlock imageWriteCompletionBlock = ^(NSURL *newURL, NSError *error){
+            UIAlertView *alert;
+            
+            if(error)
+                alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Error saving image with metadata to Photo Library" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
+            else
+                alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:@"Image with EXIF data saved to Photo Album" delegate:self cancelButtonTitle:@"return" otherButtonTitles:nil];
+            
+            [alert show];
+            [alert release];
+        };
+        
+        
+        [library writeImageToSavedPhotosAlbum:[image.image CGImage] metadata:[MixareUtils updateMetadata:imgInfo :[NSString stringWithFormat:@"Target: [latitude = %@ longitude = %@]", textFieldLat.text, textFieldLon.text]] completionBlock:imageWriteCompletionBlock];
+        
+        //saving image to app's sandbox
+        
+        [MixareUtils saveImage:image.image :textFieldName.text];
+    }
 	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 

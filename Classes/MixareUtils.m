@@ -74,8 +74,11 @@ static CLLocationCoordinate2D userProvidedLocation;
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpeg", imageName]];
+    UIImage *loadedImage = [UIImage imageWithContentsOfFile:fullPath];
+    if(!loadedImage)
+        loadedImage = [UIImage imageNamed:@"404.jpg"];
     
-    return [UIImage imageWithContentsOfFile:fullPath];
+    return loadedImage;
     
 }
 
