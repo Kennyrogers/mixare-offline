@@ -47,10 +47,11 @@
 @implementation MapViewController
 @synthesize map  = _map;
 @synthesize mapTileToggleButton = _mapTileToggleButton;
-@synthesize focusArea = _focusArea;
+@synthesize focusPOIIndex = _focusPOIIndex;
 @synthesize data = _data;
 @synthesize overlay;
 @synthesize longPressedCoords = _longPressedCoords;
+@synthesize locmng = _locmng;
 
 + (CGFloat)annotationPadding;
 {
@@ -61,11 +62,21 @@
     return 40.0f;
 }
 
+- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+	    [self mapDataToMapAnnotations];
+}
+
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	_focusPOIIndex = -1;
     _map.delegate= self;
+	_locmng = [[CLLocationManager alloc]init];
+    _locmng.desiredAccuracy = kCLLocationAccuracyBest;
+    _locmng.delegate = self;
 	MKCoordinateRegion newRegion;
-	CLLocationCoordinate2D userLocation = [MixareUtils GetUserPosition];
+	CLLocationCoordinate2D userLocation = [MixareUtils getUserProvidedLocation].coordinate;
 	newRegion.center.latitude = userLocation.latitude;
 	newRegion.center.longitude = userLocation.longitude;
 	newRegion.span.latitudeDelta = 0.03;
@@ -99,14 +110,33 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
-	if (_focusArea.center.latitude != 0.0 && _focusArea.center.longitude != 0.0) {
-		[self.map setRegion:_focusArea animated:YES];
+	if(_focusPOIIndex != -1) {
+        
+        NSString* poiName = [[_data objectAtIndex:_focusPOIIndex]valueForKey:@"title"];
+        float lat = [[[_data objectAtIndex:_focusPOIIndex]valueForKey:@"lat"] floatValue];
+        float lon = [[[_data objectAtIndex:_focusPOIIndex]valueForKey:@"lon"] floatValue];
+        
+        MKCoordinateRegion focusArea;
+        focusArea.center.latitude = lat;
+        focusArea.center.longitude = lon;
+        focusArea.span.latitudeDelta = 0.03;
+        focusArea.span.latitudeDelta = 0.03;
+        [self.map setRegion:focusArea animated:YES];
+        
+        for (id <MKAnnotation> annotation in self.map.annotations)
+        {
+            if (annotation.title == poiName)
+            {
+                [self.map selectAnnotation:annotation animated:YES];
+            }
+        }
 	}
-	
-	_focusArea.center.latitude = 0.0;
-	_focusArea.center.longitude = 0.0;
-	_focusArea.span.latitudeDelta = 0.0;
-	_focusArea.span.longitudeDelta = 0.0;
+	_focusPOIIndex = -1;
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+	[_locmng stopUpdatingLocation];
 }
 
 
@@ -146,7 +176,9 @@
 	}
 	else if (buttonIndex == 1) //User Location
 	{
-		MixareUtils.userProvidedLocation = _longPressedCoords;
+        CLLocation* loc = [[CLLocation alloc] initWithLatitude:_longPressedCoords.latitude longitude:_longPressedCoords.longitude];
+        [MixareUtils setUserProvidedLocation:loc];
+        [loc release];
 		[self mapDataToMapAnnotations];
 	}
 }
@@ -160,38 +192,74 @@
 {
 	if(_data != nil)
 	{
-		NSMutableArray *toRemove = [NSMutableArray arrayWithCapacity:[self.map.annotations count] ];
-		for (id annotation in self.map.annotations)
+        NSMutableDictionary *existingAnnotations = [[NSMutableDictionary alloc] init];
+        
+        for (id <MKAnnotation> annotation in self.map.annotations)
 		{
 			if (annotation != self.map.userLocation)
 			{
-				[toRemove addObject:annotation];
+				[existingAnnotations setObject:annotation forKey:annotation.title];
 			}
 		}
-		[self.map removeAnnotations:toRemove];
-
-		MapAnnotation * tmpPlace; 
-		for(NSDictionary * poi in _data){
-			tmpPlace = [[MapAnnotation alloc]init];
+		
+        
+        MapAnnotation * tmpPlace;
+		
+        for(NSDictionary * poi in _data)
+        {
+			MapAnnotation* existingAnnotation = [existingAnnotations valueForKey:[poi valueForKey:@"title"]];
+            
+            if (existingAnnotation == nil) //"Nil" indicates that this is a new POI
+            {
+                tmpPlace = [[MapAnnotation alloc]init];
+                [self.map addAnnotation:tmpPlace];
+            }
+            else 
+            {
+                tmpPlace = existingAnnotation;
+                [existingAnnotations removeObjectForKey:[poi valueForKey:@"title"]];
+                [tmpPlace retain];
+            }
+			
 			tmpPlace.title = [poi valueForKey:@"title"];
 			tmpPlace.lat = [[poi valueForKey:@"lat"]floatValue];
 			tmpPlace.lon = [[poi valueForKey:@"lon"]floatValue];
-            tmpPlace.source = [poi valueForKey:@"source"];
-            tmpPlace.subtitle = [NSString stringWithFormat:@"%.1f km",[MixareUtils calculateDistanceFromUser:[[CLLocation alloc] initWithLatitude:tmpPlace.lat longitude:tmpPlace.lon]]/1000];
-            [self.map addAnnotation:tmpPlace];
+			
+			tmpPlace.source = [poi valueForKey:@"source"];
+			
+			//Calculating distance from user location
+			CLLocation* poiLocation = [[CLLocation alloc] initWithLatitude:tmpPlace.lat longitude:tmpPlace.lon];
+			tmpPlace.subtitle = [NSString stringWithFormat:@"Distance: %.2f km", [MixareUtils calculateDistanceFromUser:poiLocation]/1000];
+			[poiLocation release];
+			
 			[tmpPlace release];
 		}
 		
-		if ([MixareUtils isCustomUserLocSet]) {
+		for (id key in existingAnnotations) //Any remaining Annotations here are deleted annotations, so we remove them
+		{
+			[self.map removeAnnotation:[existingAnnotations objectForKey:key]];
+		}
+		
+		if ([MixareUtils isCustomUserLocSet]) 
+		{
 			tmpPlace = [[MapAnnotation alloc]init];
 			tmpPlace.title = @"Custom User Location";
-			tmpPlace.lat = [MixareUtils GetUserPosition].latitude;
-			tmpPlace.lon = [MixareUtils GetUserPosition].longitude;
+			tmpPlace.lat = [MixareUtils getUserProvidedLocation].coordinate.latitude;
+			tmpPlace.lon = [MixareUtils getUserProvidedLocation].coordinate.longitude;
+			tmpPlace.subtitle = @"Delete this to revert to GPS usage.";
 			tmpPlace.source = @"";
 			
 			[self.map addAnnotation:tmpPlace];
 			[tmpPlace release];
+			[_locmng stopUpdatingLocation];
 		}
+		else 
+		{
+			[_locmng startUpdatingLocation];
+		}
+		
+		
+		[existingAnnotations release];
 	}
 }
 
@@ -232,6 +300,7 @@
     
 	MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
 	annView.canShowCallout = YES;    
+	annView.animatesDrop = YES;
 	annView.calloutOffset = CGPointMake(-5, 5);
 
 	UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -295,7 +364,7 @@
 	NSLog(@"Delete Annotation Button Clicked: %@", [anno title]);
 	
 	if ([anno title] == @"Custom User Location") {
-		[MixareUtils setUserProvidedLocation:CLLocationCoordinate2DMake(0,0)];
+		[MixareUtils setUserProvidedLocation:nil];
 	}
 	else {
 		for (int x=0; x < [_data count]; x++) {
@@ -324,6 +393,7 @@
 	[_map release];
 	[_mapTileToggleButton release];
 	[_data release];
+	[_locmng release];
 }
 
 @end

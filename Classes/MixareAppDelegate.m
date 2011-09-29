@@ -160,7 +160,7 @@
 	[self mapData];
     
 	if(_locManager != nil){
-		augViewController.centerLocation = [[[CLLocation alloc] initWithLatitude:[MixareUtils GetUserPosition].latitude longitude:[MixareUtils GetUserPosition].longitude] autorelease];
+		augViewController.centerLocation = [MixareUtils getUserProvidedLocation];
 	}
     [self initControls];
     [notificationView removeFromSuperview];
@@ -569,7 +569,7 @@
         pointView.image = [UIImage imageNamed:@"buzz_logo.png"];
 	}
 	else{
-		pointView.image = [UIImage imageNamed:@"list.png"];
+		pointView.image = [UIImage imageNamed:@"circle.png"];
 	}
 	
 	

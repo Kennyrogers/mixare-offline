@@ -14,32 +14,31 @@
 
 @implementation MixareUtils
 
-static CLLocationCoordinate2D userProvidedLocation;
+static CLLocation *userProvidedLocation = nil;
 
-+ (CLLocationCoordinate2D) GetUserPosition
++ (CLLocation*) getUserProvidedLocation
 {
-	CLLocationCoordinate2D coords;
-	
-	if (userProvidedLocation.latitude == 0 && userProvidedLocation.longitude == 0) {
-		CLLocationManager* locmng = [[CLLocationManager alloc]init];
-		coords = CLLocationCoordinate2DMake(locmng.location.coordinate.latitude, locmng.location.coordinate.longitude);
-		[locmng release];
+	if ([self isCustomUserLocSet]){
+		return userProvidedLocation;
 	}
 	else {
-		coords = CLLocationCoordinate2DMake(userProvidedLocation.latitude, userProvidedLocation.longitude);
+		CLLocationManager *locmng = [[CLLocationManager alloc]init];
+		CLLocation *location = locmng.location;
+		[locmng release];
+		return location;
 	}
-	
-	return coords;
 }
 
-+ (void) setUserProvidedLocation:(CLLocationCoordinate2D)loc
++ (void) setUserProvidedLocation:(CLLocation*)loc
 {
+	[userProvidedLocation release];
 	userProvidedLocation = loc;
+	[userProvidedLocation retain];
 }
 
 + (BOOL) isCustomUserLocSet
 {
-	if (userProvidedLocation.latitude == 0 && userProvidedLocation.longitude == 0) {
+	if (userProvidedLocation == nil) {
 		return false;
 	}
 	return true;
@@ -125,9 +124,7 @@ static CLLocationCoordinate2D userProvidedLocation;
     //    CLLocation *location = [[CLLocation alloc] initWithLatitude:[textFieldLat.text floatValue] longitude:[textFieldLon.text floatValue]];
     
     //current location
-    CLLocationManager *locmng = [[CLLocationManager alloc]init];
-    CLLocation *location = [self getUserCLLocation];
-    [locmng release];
+	CLLocation *location = [self getUserProvidedLocation];
     
     if (location) {
         gpsDict = [[NSMutableDictionary alloc] init];
@@ -161,18 +158,11 @@ static CLLocationCoordinate2D userProvidedLocation;
     return [gpsDict autorelease]; 
 }
 
-+ (CLLocation *)getUserCLLocation
-{
-    CLLocationManager *locmng = [[CLLocationManager alloc]init];
-    CLLocation *location = locmng.location;
-    [locmng release];
-    return location;
-}
 
 + (double)calculateDistanceFromUser:(CLLocation *)itemLoc{
     double distance = -1;
     if(itemLoc)
-        distance = [itemLoc distanceFromLocation:[self getUserCLLocation]];
+        distance = [itemLoc distanceFromLocation:[self getUserProvidedLocation]];
     return distance;
 }
 @end
